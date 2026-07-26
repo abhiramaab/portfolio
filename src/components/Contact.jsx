@@ -110,11 +110,23 @@ export default function Contact() {
             className="w-full bg-bg border border-line rounded-lg px-4 py-3 text-sm text-ink placeholder:text-faint focus:outline-none focus:border-accent/50 transition-colors resize-none mb-4"
           />
           <button
-            type="submit"
-            className="inline-flex items-center gap-2 bg-ink text-white text-sm font-medium rounded-lg px-5 py-2.5 hover:bg-accent transition-colors"
-          >
-            Send Message
-          </button>
+  className="
+    px-8
+    py-4
+    rounded-xl
+    font-semibold
+    transition-all
+    duration-300
+
+    bg-ink
+    text-bg
+
+    hover:opacity-90
+    disabled:opacity-50
+  "
+>
+  Send Message
+</button>
         </form>
       </div>
     </section>
