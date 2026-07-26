@@ -111,7 +111,7 @@ export default function Contact() {
           />
           <button
             type="submit"
-            className="inline-flex items-center gap-2 bg-ink text-black text-sm font-medium rounded-lg px-5 py-2.5 hover:bg-accent transition-colors"
+            className="inline-flex items-center gap-2 bg-ink text-white text-sm font-medium rounded-lg px-5 py-2.5 hover:bg-accent transition-colors"
           >
             Send Message
           </button>
