@@ -1,6 +1,5 @@
 import { Mail, MapPin, Terminal } from 'lucide-react'
 import { profile } from '../data'
-import ContributionGraph from './ContributionGraph'
 
 function Avatar() {
   return (
@@ -101,9 +100,7 @@ export default function Hero() {
           <RouteSignature />
         </div>
 
-        <div className="fade-up">
-          <ContributionGraph />
-        </div>
+        
       </div>
     </section>
   )
