@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { ArrowUpRight, CheckCircle2, Clock, Github, Mail } from 'lucide-react'
+import { FaXTwitter } from 'react-icons/fa6'
 import { contactMethods, profile } from '../data'
 
-const ICONS = { Mail, Github }
+const ICONS = { Mail, Github, FaXTwitter }
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -128,6 +129,28 @@ export default function Contact() {
   Send Message
 </button>
         </form>
+
+<div className="mt-8 border border-line rounded-2xl bg-surface p-7">
+
+  <div className="flex gap-4">
+
+    <span className="text-4xl text-faint">"</span>
+
+    <div>
+
+      <p className="text-lg text-ink leading-8 italic">
+        The unexamined life is not worth living.
+      </p>
+
+      <p className="mt-5 text-muted">
+        — Socrates
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
       </div>
     </section>
   )
