@@ -18,7 +18,7 @@ export const projects = [
   {
     name: 'Synoptiq',
     href: 'https://usesynoptiq.com',
-    desc: 'AI-powered workflow automation — Gmail, Calendar, Github sync, summaries, and scheduled jobs.',
+    desc: 'Productivity platform for email automation, workflow management, and Google Workspace integration.',
     external: true,
   },
   {
