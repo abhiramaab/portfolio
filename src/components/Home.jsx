@@ -1,7 +1,7 @@
 import {
+  currently,
   currentlyLearning,
   elsewhere,
-  now,
   previously,
   profile,
   projects,
@@ -23,10 +23,7 @@ export default function Home() {
           className="mb-[18px] block h-[46px] w-[46px] rounded-full border border-line2 object-cover"
         />
         <div className="text-[15px] leading-normal">
-          <h1 className="font-medium text-ink">
-            {profile.name}{' '}
-            <span className="wave">👋</span>
-          </h1>
+          <h1 className="font-medium text-ink">{profile.name}</h1>
           <div className="text-body">{profile.role}</div>
           <div className="text-muted">{profile.tagline}</div>
         </div>
@@ -35,17 +32,22 @@ export default function Home() {
       <div className="mt-6 border-t border-line" />
 
       <div className="rise" style={{ animationDelay: '0.05s' }}>
-        <Section label="Now">
+        <Section id="currently" label="Currently">
           <p className="text-[15px] leading-relaxed text-body">
-            {now.text}{' '}
-            <a className="ulink" href={now.link.href} target="_blank" rel="noreferrer">
-              {now.link.label}
+            {currently.text}{' '}
+            <a
+              className="ulink"
+              href={currently.link.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {currently.link.label}
             </a>
-            {now.rest}
+            {currently.rest}
           </p>
         </Section>
 
-        <Section label="Projects">
+        <Section id="projects" label="Projects">
           {projects.map((p) => (
             <LinkItem
               key={p.name}
@@ -55,10 +57,9 @@ export default function Home() {
               external={p.external}
             />
           ))}
-          <div className="mt-4 text-sm text-muted">the rest are a secret 🤫</div>
         </Section>
 
-        <Section label="Previously">
+        <Section id="previously" label="Previously">
           <p className="text-[15px] leading-relaxed text-body">
             {previously.text}{' '}
             <a
@@ -73,16 +74,16 @@ export default function Home() {
           </p>
         </Section>
 
-        <Section label="Currently learning">
+        <Section id="currently-learning" label="Currently learning">
           <div className="text-sm text-body">{currentlyLearning.join(', ')}.</div>
         </Section>
 
-        <Section label="Stack">
+        <Section id="stack" label="Stack">
           <div className="text-sm text-body">{stack.items.join(', ')}.</div>
           <div className="mt-1.5 text-sm text-muted">{stack.subtitle}</div>
         </Section>
 
-        <Section label="Elsewhere">
+        <Section id="elsewhere" label="Elsewhere">
           <div className="flex items-center gap-4">
             {elsewhere.map((link) => (
               <a

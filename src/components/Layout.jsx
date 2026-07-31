@@ -1,30 +1,21 @@
 import { Github, Mail, Moon, Sun } from 'lucide-react'
-import { resume } from '../data'
-
-function navClass(active, page) {
-  return [
-    'text-sm transition-colors',
-    active === page ? 'text-ink' : 'text-muted hover:text-ink',
-  ].join(' ')
-}
+import { navSections } from '../data'
 
 export default function Layout({ darkMode, setDarkMode, children }) {
   return (
-    <div className="mx-auto grid min-h-screen max-w-[940px] grid-cols-1 px-6 md:grid-cols-[140px_1fr]">
+    <div className="mx-auto grid min-h-screen max-w-[940px] grid-cols-1 px-6 md:grid-cols-[160px_1fr]">
       <aside className="pt-10 md:py-14 md:pr-7">
         <div className="flex items-center justify-between md:sticky md:top-14 md:flex-col md:items-start md:gap-5">
-          <nav className="flex gap-5 md:flex-col md:gap-2.5">
-            <a className={navClass('home', 'home')} href="/" aria-current="page">
-              Home
-            </a>
-            <a
-              className="ulink text-sm"
-              href={resume.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Résumé
-            </a>
+          <nav className="flex flex-wrap gap-x-5 gap-y-2 md:flex-col md:gap-2.5">
+            {navSections.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className="text-sm text-muted transition-colors hover:text-ink"
+              >
+                {section.label}
+              </a>
+            ))}
           </nav>
 
           <button

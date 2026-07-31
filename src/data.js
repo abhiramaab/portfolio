@@ -7,7 +7,7 @@ export const profile = {
   location: 'Bengaluru, India',
 }
 
-export const currently  = {
+export const currently = {
   text: 'Building',
   link: {
     label: 'Synoptiq',
@@ -74,6 +74,11 @@ export const elsewhere = [
   { label: 'Email', href: 'mailto:abhiram.b@icloud.com' },
 ]
 
-export const resume = {
-  href: '/resume.html',
-}
+export const navSections = [
+  { label: 'Currently', id: 'currently' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Previously', id: 'previously' },
+  { label: 'Currently learning', id: 'currently-learning' },
+  { label: 'Stack', id: 'stack' },
+  { label: 'Elsewhere', id: 'elsewhere' },
+]
