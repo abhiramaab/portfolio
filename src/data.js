@@ -23,7 +23,7 @@ export const projects = [
   },
   {
     name: 'RouteSphere',
-    href: 'https://project.routesphere.abhiram.tech',
+    href: 'https://github.com/abhiramaab/routesphere-microservices',
     desc: 'Microservices logistics platform with API Gateway, Eureka, and JWT auth.',
     external: true,
   },
