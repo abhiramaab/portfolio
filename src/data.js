@@ -37,11 +37,7 @@ export const projects = [
 
 export const previously = {
   text: 'Before backend development, I spent 4.5+ years running eCommerce operations across 7+ marketplaces — inventory, fulfillment, and the kind of operational chaos that teaches you what production actually means. Now I build backend systems with',
-  link: {
-    label: 'Java & Spring Boot',
-    href: 'https://github.com/abhiramaab',
-  },
-  rest: '— APIs, authentication, and services designed to run cleanly in production.',
+  rest: 'Java & Spring Boot — APIs, authentication, and services designed to run cleanly in production.',
 }
 
 export const currentlyLearning = [
