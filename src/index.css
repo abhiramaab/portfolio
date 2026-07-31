@@ -15,14 +15,14 @@
 }
 
 .dark {
-  --bg: #0d0c0b;
+  --bg: #000000;
   --ink: #f1efe9;
   --body: #c9c6bf;
   --muted: #6f6c64;
   --faint: #55524b;
-  --line: #201f1b;
-  --line-2: #2a2820;
-  --surface: #151410;
+  --line: #1a1a1a;
+  --line-2: #262626;
+  --surface: #000000;
   color-scheme: dark;
 }
 

@@ -15,6 +15,13 @@
       content="Personal portfolio of Abhirama, a backend developer specializing in Java and Spring Boot."
     />
     <title>Abhirama</title>
+    <meta name="theme-color" content="#fdfdfc" />
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark')
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#000000')
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
