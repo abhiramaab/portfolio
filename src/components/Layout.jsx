@@ -36,21 +36,30 @@ function SidebarNav({ onNavigate, className = '' }) {
 export default function Layout({ darkMode, setDarkMode, children }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const closeMenu = () => setMenuOpen(false)
+
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    if (!menuOpen) return
+
+    const closeOnScroll = () => setMenuOpen(false)
+
+    window.addEventListener('scroll', closeOnScroll, { passive: true })
+    window.addEventListener('wheel', closeOnScroll, { passive: true })
+    window.addEventListener('touchmove', closeOnScroll, { passive: true })
+
     return () => {
-      document.body.style.overflow = ''
+      window.removeEventListener('scroll', closeOnScroll)
+      window.removeEventListener('wheel', closeOnScroll)
+      window.removeEventListener('touchmove', closeOnScroll)
     }
   }, [menuOpen])
-
-  const closeMenu = () => setMenuOpen(false)
 
   return (
     <div className="mx-auto grid min-h-screen max-w-[940px] grid-cols-1 px-6 md:grid-cols-[160px_1fr]">
       {/* Mobile header + hamburger menu */}
       <div className="sticky top-0 z-30 -mx-6 border-b border-line bg-[color:var(--bg)]/95 px-6 py-4 backdrop-blur-sm md:hidden">
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-ink">Menu</span>
+          <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
@@ -63,20 +72,9 @@ export default function Layout({ darkMode, setDarkMode, children }) {
         </div>
 
         {menuOpen && (
-          <>
-            <button
-              type="button"
-              aria-label="Close menu"
-              className="fixed inset-0 top-[57px] bg-black/20"
-              onClick={closeMenu}
-            />
-            <div className="relative border-t border-line pt-4">
-              <SidebarNav onNavigate={closeMenu} />
-              <div className="mt-4 border-t border-line pt-4">
-                <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
-              </div>
-            </div>
-          </>
+          <div className="border-t border-line pt-4">
+            <SidebarNav onNavigate={closeMenu} />
+          </div>
         )}
       </div>
 
