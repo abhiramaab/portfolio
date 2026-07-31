@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Github, Mail, Menu, Moon, Sun, X } from 'lucide-react'
+import { Github, Linkedin, Mail, Menu, Moon, Sun, X } from 'lucide-react'
 import { navSections } from '../data'
 
 function ThemeToggle({ darkMode, setDarkMode, className = '' }) {
@@ -95,6 +95,7 @@ export default function Layout({ darkMode, setDarkMode, children }) {
 
 export function ElsewhereIcon({ label }) {
   if (label === 'GitHub') return <Github size={17} />
+  if (label === 'LinkedIn') return <Linkedin size={17} />
   if (label === 'Email') return <Mail size={17} />
   return null
 }

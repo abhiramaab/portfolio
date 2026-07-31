@@ -69,6 +69,7 @@ export const stack = {
 
 export const elsewhere = [
   { label: 'GitHub', href: 'https://github.com/abhiramaab' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/ababhirama' },
   { label: 'Email', href: 'mailto:abhiram.b@icloud.com' },
 ]
 
