@@ -32,7 +32,7 @@ export default function Home() {
       <div className="mt-6 border-t border-line" />
 
       <div className="rise" style={{ animationDelay: '0.05s' }}>
-        <Section id="currently" label="Currently">
+        <Section id="summary" label="Summary">
           <p className="text-[15px] leading-relaxed text-body">{summary.rest.trim()}</p>
         </Section>
 

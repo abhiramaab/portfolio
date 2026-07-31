@@ -17,8 +17,8 @@ export const summary = {
 export const projects = [
   {
     name: 'Synoptiq',
-    href: 'https://project.synoptiq.abhiram.tech',
-    desc: 'AI-powered workflow automation — Gmail sync, summaries, and scheduled jobs.',
+    href: 'https://usesynoptiq.com',
+    desc: 'AI-powered workflow automation — Gmail, Calendar, Github sync, summaries, and scheduled jobs.',
     external: true,
   },
   {
@@ -73,7 +73,7 @@ export const elsewhere = [
 ]
 
 export const navSections = [
-  { label: 'Currently', id: 'currently' },
+  { label: 'Summary', id: 'summary' },
   { label: 'Projects', id: 'projects' },
   { label: 'Previously', id: 'previously' },
   { label: 'Currently learning', id: 'currently-learning' },
