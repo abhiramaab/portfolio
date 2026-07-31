@@ -61,15 +61,6 @@ export const techStack = {
 
 export const projects = [
   {
-    name: 'RouteSphere',
-    tagline: 'Microservices-based logistics & fleet management system',
-    description:
-      'Nine independently deployable Spring Boot services behind an API Gateway with Eureka service discovery, JWT auth, and Spring Security. Centralized routing and a scalable structure built for independent deployment. Currently adding centralized logging for production readiness.',
-    tags: ['Spring Boot', 'Microservices', 'Docker', 'JWT', 'Eureka'],
-    github: 'https://github.com/abhiramaab/routesphere-microservices',
-    live: 'https://project.routesphere.abhiram.tech',
-  },
-  {
     name: 'Synoptiq',
     tagline: 'AI-powered workflow automation platform',
     description:
@@ -77,6 +68,15 @@ export const projects = [
     tags: ['Spring Boot', 'PostgreSQL', 'OAuth2', 'Gmail API', 'OpenAI API'],
     github: null,
     live: 'https://project.synoptiq.abhiram.tech',
+  },
+  {
+    name: 'RouteSphere',
+    tagline: 'Microservices-based logistics & fleet management system',
+    description:
+      'Nine independently deployable Spring Boot services behind an API Gateway with Eureka service discovery, JWT auth, and Spring Security. Centralized routing and a scalable structure built for independent deployment. Currently adding centralized logging for production readiness.',
+    tags: ['Spring Boot', 'Microservices', 'Docker', 'JWT', 'Eureka'],
+    github: 'https://github.com/abhiramaab/routesphere-microservices',
+    live: 'https://project.routesphere.abhiram.tech',
   },
   {
     name: 'WorkBoard',
