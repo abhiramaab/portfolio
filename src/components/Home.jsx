@@ -1,4 +1,5 @@
 import {
+  currentlyLearning,
   elsewhere,
   now,
   previously,
@@ -70,6 +71,10 @@ export default function Home() {
             </a>{' '}
             {previously.rest}
           </p>
+        </Section>
+
+        <Section label="Currently learning">
+          <div className="text-sm text-body">{currentlyLearning.join(', ')}.</div>
         </Section>
 
         <Section label="Stack">

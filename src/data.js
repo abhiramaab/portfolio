@@ -46,6 +46,14 @@ export const previously = {
   rest: '— APIs, authentication, and services designed to run cleanly in production.',
 }
 
+export const currentlyLearning = [
+  'System Design',
+  'Microservices',
+  'Kubernetes',
+  'Distributed Systems',
+  'AI Agent Architectures',
+]
+
 export const stack = {
   items: [
     'Java',
