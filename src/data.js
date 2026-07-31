@@ -7,13 +7,13 @@ export const profile = {
   location: 'Bengaluru, India',
 }
 
-export const now = {
+export const currently  = {
   text: 'Building',
   link: {
     label: 'Synoptiq',
     href: 'https://project.synoptiq.abhiram.tech',
   },
-  rest: '— an AI-powered workflow automation platform on Spring Boot. Gmail sync, AI summaries, scheduled jobs, and a modular automation engine for turning inbox threads into real work.',
+  rest: ' scalable backend systems using Java, Spring Boot, PostgreSQL, REST APIs and AI.',
 }
 
 export const projects = [
