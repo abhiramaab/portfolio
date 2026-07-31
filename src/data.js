@@ -7,13 +7,11 @@ export const profile = {
   location: 'Bengaluru, India',
 }
 
-export const currently = {
-  text: 'Building',
+export const summary = {
   link: {
-    label: 'Synoptiq',
     href: 'https://project.synoptiq.abhiram.tech',
   },
-  rest: ' scalable backend systems using Java, Spring Boot, PostgreSQL, REST APIs and AI.',
+  rest: '  I build backend systems with Java, Spring Boot, and PostgreSQL. I enjoy designing secure REST APIs, solving real-world problems, and writing clean, maintainable software.',
 }
 
 export const projects = [
