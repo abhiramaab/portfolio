@@ -1,32 +1,90 @@
-import { Github, Mail, Moon, Sun } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { Github, Mail, Menu, Moon, Sun, X } from 'lucide-react'
 import { navSections } from '../data'
 
+function ThemeToggle({ darkMode, setDarkMode, className = '' }) {
+  return (
+    <button
+      type="button"
+      onClick={() => setDarkMode(!darkMode)}
+      aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+      className={`inline-flex w-fit items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink ${className}`}
+    >
+      {darkMode ? <Sun size={14} /> : <Moon size={14} />}
+      {darkMode ? 'flashbang' : 'lights out'}
+    </button>
+  )
+}
+
+function SidebarNav({ onNavigate, className = '' }) {
+  return (
+    <nav className={`flex flex-col gap-2.5 ${className}`}>
+      {navSections.map((section) => (
+        <a
+          key={section.id}
+          href={`#${section.id}`}
+          onClick={onNavigate}
+          className="text-sm text-muted transition-colors hover:text-ink"
+        >
+          {section.label}
+        </a>
+      ))}
+    </nav>
+  )
+}
+
 export default function Layout({ darkMode, setDarkMode, children }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
+
+  const closeMenu = () => setMenuOpen(false)
+
   return (
     <div className="mx-auto grid min-h-screen max-w-[940px] grid-cols-1 px-6 md:grid-cols-[160px_1fr]">
-      <aside className="sticky top-0 z-20 border-b border-line bg-[color:var(--bg)]/95 pt-5 pb-4 backdrop-blur-sm md:static md:z-auto md:border-b-0 md:bg-transparent md:pt-0 md:pb-0 md:py-14 md:pr-7 md:backdrop-blur-none">
-        <div className="flex flex-col gap-4 md:sticky md:top-14 md:gap-5">
-          <nav className="grid grid-cols-2 gap-x-4 gap-y-2.5 sm:grid-cols-3 md:flex md:flex-col md:gap-2.5">
-            {navSections.map((section) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="text-[13px] leading-snug text-muted transition-colors hover:text-ink sm:text-sm"
-              >
-                {section.label}
-              </a>
-            ))}
-          </nav>
-
+      {/* Mobile header + hamburger menu */}
+      <div className="sticky top-0 z-30 -mx-6 border-b border-line bg-[color:var(--bg)]/95 px-6 py-4 backdrop-blur-sm md:hidden">
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-medium text-ink">Menu</span>
           <button
             type="button"
-            onClick={() => setDarkMode(!darkMode)}
-            aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-            className="inline-flex w-fit items-center gap-1.5 border-t border-line pt-4 text-[13px] text-muted transition-colors hover:text-ink sm:text-sm md:border-t-0 md:pt-0"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            className="inline-flex items-center justify-center text-muted transition-colors hover:text-ink"
           >
-            {darkMode ? <Sun size={14} /> : <Moon size={14} />}
-            {darkMode ? 'flashbang' : 'lights out'}
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
+        </div>
+
+        {menuOpen && (
+          <>
+            <button
+              type="button"
+              aria-label="Close menu"
+              className="fixed inset-0 top-[57px] bg-black/20"
+              onClick={closeMenu}
+            />
+            <div className="relative border-t border-line pt-4">
+              <SidebarNav onNavigate={closeMenu} />
+              <div className="mt-4 border-t border-line pt-4">
+                <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* Desktop sidebar */}
+      <aside className="hidden md:block md:py-14 md:pr-7">
+        <div className="sticky top-14 flex flex-col gap-5">
+          <SidebarNav />
+          <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         </div>
       </aside>
 
