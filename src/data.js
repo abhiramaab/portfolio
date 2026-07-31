@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Abhirama',
   role: 'Backend Developer',
-  tagline: "systems that don't break under real mess.",
+  tagline: "build with purpose, ship with confidence.",
   email: 'abhiram.b@icloud.com',
   github: 'https://github.com/abhiramaab',
   location: 'Bengaluru, India',
