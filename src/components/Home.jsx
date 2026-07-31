@@ -1,11 +1,11 @@
 import {
-  currently,
   currentlyLearning,
   elsewhere,
   previously,
   profile,
   projects,
   stack,
+  summary,
 } from '../data'
 import { ElsewhereIcon } from './Layout'
 import LinkItem from './LinkItem'
@@ -33,18 +33,7 @@ export default function Home() {
 
       <div className="rise" style={{ animationDelay: '0.05s' }}>
         <Section id="currently" label="Currently">
-          <p className="text-[15px] leading-relaxed text-body">
-            {currently.text}{' '}
-            <a
-              className="ulink"
-              href={currently.link.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {currently.link.label}
-            </a>
-            {currently.rest}
-          </p>
+          <p className="text-[15px] leading-relaxed text-body">{summary.rest.trim()}</p>
         </Section>
 
         <Section id="projects" label="Projects">
