@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A B Abhirama — Resume</title>
+  <style>
+    @page { size: A4; margin: 14mm 16mm; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Calibri, Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.35;
+      color: #111;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 14mm 16mm;
+      background: #fff;
+    }
+    h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .headline {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 8px;
+    }
+    .contact {
+      font-size: 9.5pt;
+      color: #333;
+      margin-bottom: 14px;
+    }
+    .contact a { color: #111; text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid #222;
+      padding-bottom: 3px;
+      margin: 14px 0 8px;
+    }
+    p { margin-bottom: 8px; }
+    ul { margin: 0 0 8px 18px; }
+    li { margin-bottom: 4px; }
+    .job { margin-bottom: 10px; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      margin-bottom: 2px;
+    }
+    .job-title { font-weight: 700; }
+    .job-org { font-weight: 600; }
+    .job-date { font-size: 9.5pt; color: #333; white-space: nowrap; }
+    .project-name { font-weight: 700; }
+    .project-links { font-size: 9.5pt; color: #333; margin-bottom: 4px; }
+    .skills-line { margin-bottom: 4px; }
+    .skills-line strong { font-weight: 700; }
+    @media print {
+      body { padding: 0; }
+      a { color: #111; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>A B Abhirama</h1>
+  <div class="headline">Java Backend Developer | Spring Boot | REST APIs | PostgreSQL</div>
+  <div class="contact">
+    Email: <a href="mailto:abhiram.b@icloud.com">abhiram.b@icloud.com</a> &nbsp;|&nbsp;
+    Phone: +91 8660120678 &nbsp;|&nbsp;
+  Bengaluru, Karnataka &nbsp;|&nbsp;
+    GitHub: <a href="https://github.com/abhiramaab">github.com/abhiramaab</a> &nbsp;|&nbsp;
+    LinkedIn: <a href="https://linkedin.com/in/">linkedin.com/in/your-profile</a>
+  </div>
+
+  <h2>Professional Summary</h2>
+  <p>
+    Java Backend Developer with hands-on experience building and deploying REST APIs using Spring Boot,
+    Spring Security, JPA/Hibernate, and PostgreSQL. Built production applications with JWT and OAuth2
+    authentication, third-party API integrations (Gmail, GitHub, Google Calendar), background jobs,
+    and Docker deployment on AWS EC2. Skilled in DTO design, validation, pagination, and unit testing
+    with JUnit 5 and Mockito. Career background in eCommerce operations with strong data and process discipline.
+  </p>
+
+  <h2>Technical Skills</h2>
+  <p class="skills-line"><strong>Languages &amp; Frameworks:</strong> Java, Spring Boot, Spring MVC, Spring Security, JPA, Hibernate, Maven, Gradle</p>
+  <p class="skills-line"><strong>API &amp; Security:</strong> REST APIs, DTO, Bean Validation, JWT, OAuth2, Swagger/OpenAPI, Postman</p>
+  <p class="skills-line"><strong>Databases:</strong> PostgreSQL, MySQL, SQL, JPA Relationships, Pagination, Query Optimization</p>
+  <p class="skills-line"><strong>Integrations:</strong> Gmail API, GitHub API, Google Calendar API, Third-party REST API Integration</p>
+  <p class="skills-line"><strong>Testing &amp; DevOps:</strong> JUnit 5, Mockito, Git, GitHub, Docker, AWS EC2</p>
+  <p class="skills-line"><strong>Architecture:</strong> Layered Architecture, Service-Oriented Design, Microservices (Spring Cloud)</p>
+
+  <h2>Projects</h2>
+
+  <div class="job">
+    <div class="project-name">Synoptiq — Workflow Automation Platform (Live)</div>
+    <div class="project-links">Live: <a href="https://synoptiq.abhiram.tech">synoptiq.abhiram.tech</a> &nbsp;|&nbsp; GitHub: <a href="https://github.com/abhiramaab">github.com/abhiramaab</a></div>
+    <div class="job-header"><span class="job-org">Java, Spring Boot, PostgreSQL, JWT, OAuth2, Docker, AWS EC2</span></div>
+    <ul>
+      <li>Designed and deployed a modular backend with secure JWT authentication and Google OAuth2 sign-in.</li>
+      <li>Implemented Gmail integration: email sync, natural-language search, summarization, watchlists, and notifications.</li>
+      <li>Built REST APIs with DTO layer, input validation, pagination, filtering, and scheduled background jobs.</li>
+      <li>Integrated GitHub and Google Calendar APIs for activity summaries and event-based workflows.</li>
+      <li>Deployed production environment using Docker on AWS EC2 with PostgreSQL.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="project-name">RouteSphere — Logistics &amp; Fleet Management Platform</div>
+    <div class="project-links">Live: <a href="https://routesphere.abhiram.tech">routesphere.abhiram.tech</a> &nbsp;|&nbsp; GitHub: <a href="https://github.com/abhiramaab/routesphere-microservices">routesphere-microservices</a></div>
+    <div class="job-header"><span class="job-org">Java, Spring Boot, Spring Cloud, Eureka, API Gateway, Docker, JWT</span></div>
+    <ul>
+      <li>Developed a microservices-based platform with 9 independently deployable services.</li>
+      <li>Implemented centralized API routing, service discovery, and JWT-based authentication.</li>
+      <li>Containerized services with Docker to support scalable, independent deployments.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="project-name">WorkBoard — Project &amp; Task Management Backend</div>
+    <div class="project-links">GitHub: <a href="https://github.com/abhiramaab/workboard">github.com/abhiramaab/workboard</a></div>
+    <div class="job-header"><span class="job-org">Java, Spring Boot, Spring Security, JPA, MySQL/PostgreSQL</span></div>
+    <ul>
+      <li>Built role-based access control across departments, employees, projects, and tasks.</li>
+      <li>Designed JPA entity relationships and DTO layer for clean API responses.</li>
+      <li>Implemented pagination and role-restricted data access for multi-level organizational hierarchies.</li>
+    </ul>
+  </div>
+
+  <h2>Professional Experience</h2>
+
+  <div class="job">
+    <div class="job-header">
+      <span><span class="job-title">Business Development Executive</span> — iThink Logistics Quick Services Pvt Ltd, Bengaluru</span>
+      <span class="job-date">Oct 2025 – May 2026</span>
+    </div>
+    <ul>
+      <li>Supported launch of South Region office through lead generation and B2B pipeline development.</li>
+      <li>Identified prospects across FMCG, D2C, and retail segments and maintained structured sales tracking.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span><span class="job-title">Ecommerce Consultant (Freelance)</span> — Mannol India Advanced Lubrication Technology, Remote</span>
+      <span class="job-date">Mar 2025 – Sep 2025</span>
+    </div>
+    <ul>
+      <li>Designed and launched a Shopify storefront; optimized Amazon ad campaigns improving ROAS from 16 to 24.</li>
+      <li>Expanded marketplace presence across Amazon, Flipkart, and B2B platforms.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span><span class="job-title">Ecommerce Executive</span> — Medicon Leather Pvt Ltd, Bengaluru</span>
+      <span class="job-date">Aug 2023 – Feb 2025</span>
+    </div>
+    <ul>
+      <li>Managed product catalog data across 7+ marketplaces (Amazon, Flipkart, Myntra, Nykaa, and others) for thousands of SKUs.</li>
+      <li>Reduced stock mismatches through systematic inventory reconciliation across platforms.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span><span class="job-title">Commercial Associate</span> — Wipro Consumer Care and Lightings, Bengaluru</span>
+      <span class="job-date">Jul 2021 – Nov 2022</span>
+    </div>
+    <ul>
+      <li>Processed SAP ERP transactions including billing, GRNs, and stock transfers with high accuracy.</li>
+      <li>Led quarterly stock audits and prepared monthly reports on inventory movement trends.</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+  <div class="job">
+    <div class="job-header">
+      <span><span class="job-title">Bachelor of Computer Applications (BCA)</span> — University of Mysore, Mysore</span>
+      <span class="job-date">Pursuing · Expected 2028</span>
+    </div>
+  </div>
+  <div class="job">
+    <div class="job-header">
+      <span><span class="job-title">12th (II PUC)</span> — Rural Institute of Advanced Studies (RIOS), Raipur</span>
+      <span class="job-date">2017</span>
+    </div>
+  </div>
+
+</body>
+</html>

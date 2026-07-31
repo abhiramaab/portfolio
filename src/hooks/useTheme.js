@@ -1,25 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 export default function useTheme() {
-  const getInitialTheme = () => {
-    const saved = localStorage.getItem("theme");
-    if (saved) return saved;
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  };
-
-  const [theme, setTheme] = useState(getInitialTheme);
+  const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    const root = document.documentElement
+    root.classList.add('theme-switch')
+    root.classList.toggle('dark', darkMode)
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  };
+    const frame = requestAnimationFrame(() => {
+      requestAnimationFrame(() => root.classList.remove('theme-switch'))
+    })
 
-  return { theme, toggleTheme };
+    return () => cancelAnimationFrame(frame)
+  }, [darkMode])
+
+  return { darkMode, setDarkMode }
 }
