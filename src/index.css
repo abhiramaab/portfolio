@@ -1,0 +1,106 @@
+:root {
+  --bg: 255 255 255;
+  --surface: 248 250 252;
+  --surface2: 241 245 249;
+  --line: 226 232 240;
+  --ink: 15 23 42;
+  --muted: 100 116 139;
+  --faint: 148 163 184;
+}
+
+.dark {
+  --bg: 0 0 0;
+  --surface: 10 10 11;
+  --surface2: 15 15 17;
+  --line: 26 26 29;
+  --ink: 242 242 243;
+  --muted: 138 138 143;
+  --faint: 92 92 97;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #F2F2F3;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #22D3EE;
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2129;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A2E38;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Caret for the role rotator */
+.caret {
+  display: inline-block;
+  width: 2px;
+  margin-left: 2px;
+  background: #22D3EE;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Route line signature element: dot travels the dashed path */
+.route-path {
+  stroke-dasharray: 6 8;
+}
+.route-dot {
+  offset-path: path('M2,40 C 120,40 140,4 260,4 S 400,40 498,40');
+  animation: travel 5.5s ease-in-out infinite;
+}
+@keyframes travel {
+  0% { offset-distance: 0%; }
+  50% { offset-distance: 100%; }
+  100% { offset-distance: 0%; }
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.grid-fade {
+  background-image:
+    linear-gradient(to right, #14161c 1px, transparent 1px),
+    linear-gradient(to bottom, #14161c 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 40%, transparent 100%);
+}
