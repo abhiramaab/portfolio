@@ -15,11 +15,10 @@
       content="Personal portfolio of Abhirama, a backend developer specializing in Java and Spring Boot."
     />
     <title>Abhirama</title>
-    <meta name="theme-color" content="#fdfdfc" />
+    <meta name="theme-color" content="#000000" />
     <script>
-      if (localStorage.getItem('theme') === 'dark') {
+      if (localStorage.getItem('theme') !== 'light') {
         document.documentElement.classList.add('dark')
-        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#000000')
       }
     </script>
   </head>
