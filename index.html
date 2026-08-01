@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -15,11 +15,12 @@
       content="Personal portfolio of Abhirama, a backend developer specializing in Java and Spring Boot."
     />
     <title>Abhirama</title>
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#fdfdfc" />
     <script>
       try {
-        if (localStorage.getItem('portfolio-theme') === 'light') {
-          document.documentElement.classList.remove('dark')
+        if (localStorage.getItem('portfolio-theme-v2') === 'dark') {
+          document.documentElement.classList.add('dark')
+          document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#000000')
         }
       } catch (e) {}
     </script>

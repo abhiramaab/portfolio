@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react'
 
-const THEME_KEY = 'portfolio-theme'
+const THEME_KEY = 'portfolio-theme-v2'
 
 function getInitialTheme() {
-  if (typeof window === 'undefined') return true
+  if (typeof window === 'undefined') return false
 
   try {
-    const saved = localStorage.getItem(THEME_KEY)
-    if (saved === 'light') return false
-    return true
+    return localStorage.getItem(THEME_KEY) === 'dark'
   } catch {
-    return true
+    return false
   }
 }
 
