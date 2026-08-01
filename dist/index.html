@@ -15,8 +15,15 @@
       content="Personal portfolio of Abhirama, a backend developer specializing in Java and Spring Boot."
     />
     <title>Abhirama</title>
-    <script type="module" crossorigin src="/assets/index-Bd10qHph.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B3synBXS.css">
+    <meta name="theme-color" content="#fdfdfc" />
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark')
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#000000')
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-NR_qVsmH.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cw2FeJ4k.css">
   </head>
   <body>
     <div id="root"></div>

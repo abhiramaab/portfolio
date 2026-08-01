@@ -50,16 +50,7 @@ export default function Home() {
 
         <Section id="previously" label="Previously">
           <p className="text-[15px] leading-relaxed text-body">
-            {previously.text}{' '}
-            <a
-              className="ulink"
-              href={previously.link.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {previously.link.label}
-            </a>{' '}
-            {previously.rest}
+            {previously.text} {previously.rest}
           </p>
         </Section>
 

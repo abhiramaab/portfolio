@@ -57,7 +57,7 @@ export default function Layout({ darkMode, setDarkMode, children }) {
   return (
     <div className="mx-auto grid min-h-screen max-w-[940px] grid-cols-1 px-6 md:grid-cols-[160px_1fr]">
       {/* Mobile header + hamburger menu */}
-      <div className="sticky top-0 z-30 -mx-6 border-b border-line bg-[color:var(--bg)]/95 px-6 py-4 backdrop-blur-sm md:hidden">
+      <div className="sticky top-0 z-30 -mx-6 border-b border-line bg-[color:var(--bg)] px-6 py-4 md:hidden">
         <div className="flex items-center justify-between">
           <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
           <button
