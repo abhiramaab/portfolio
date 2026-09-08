@@ -45,6 +45,14 @@ export const openSource = [
     desc: 'Fixed Active Directory DN Authentication by resolving user principal name binding bug; validated and merged into official release 3.0.1.',
   },
   {
+    name: 'Jenkins',
+    href: 'https://github.com/jenkinsci/atlassian-jira-software-cloud-plugin/pull/143',
+    pr: '#143',
+    badge: 'PR',
+    repoDesc: 'Atlassian Jira Software Cloud Plugin',
+    desc: 'Resolved broken build and deployment URLs sent to Jira Cloud by engineering RunUrlProvider to properly percent-encode multibranch paths; backed with JenkinsRule integration tests.',
+  },
+  {
     name: 'Kestra',
     href: 'https://github.com/kestra-io/kestra/pull/19007',
     pr: '#19007',
@@ -55,14 +63,6 @@ export const openSource = [
     ],
     repoDesc: 'Declarative Orchestration Engine (15k+ Stars)',
     desc: 'Resolved Model Context Protocol (MCP) client auto health-check socket floods with regression test suite; added parseMode validation to Telegram plugin.',
-  },
-  {
-    name: 'Jenkins',
-    href: 'https://github.com/jenkinsci/atlassian-jira-software-cloud-plugin/pull/143',
-    pr: '#143',
-    badge: 'PR',
-    repoDesc: 'Atlassian Jira Software Cloud Plugin',
-    desc: 'Resolved broken build and deployment URLs sent to Jira Cloud by engineering RunUrlProvider to properly percent-encode multibranch paths; backed with JenkinsRule integration tests.',
   },
 ]
 
