@@ -11,7 +11,7 @@ export const summary = {
   link: {
     href: 'https://project.synoptiq.abhiram.tech',
   },
-  rest: '  Java Backend Developer specializing in Java (8/17/21), Spring Boot, Spring Security, and Microservices architectures. Proven track record contributing to major open-source ecosystems (Apache Shiro, Kestra) resolving authentication and protocol-level bugs. Designing secure REST APIs, scalable distributed systems, and resilient data models.',
+  rest: '  Java Backend Developer specializing in Java (8/17/21), Spring Boot, Spring Security, and Microservices architectures. Proven track record contributing to major open-source ecosystems (Apache Shiro, Jenkins, Kestra) resolving authentication and protocol-level bugs. Designing secure REST APIs, scalable distributed systems, and resilient data models.',
 }
 
 export const projects = [
@@ -57,12 +57,12 @@ export const openSource = [
     desc: 'Resolved Model Context Protocol (MCP) client auto health-check socket floods with regression test suite; added parseMode validation to Telegram plugin.',
   },
   {
-    name: 'Karate Championship Management App',
-    href: 'https://github.com/AthleticAvi/Karate-Championship-Management-App/pull/63',
-    pr: '#63',
-    badge: 'Merged',
-    repoDesc: 'Open Source Application',
-    desc: 'Refactored core logger fields to private static final modifiers to enforce clean OOP encapsulation and prevent logger state leakage.',
+    name: 'Jenkins',
+    href: 'https://github.com/jenkinsci/atlassian-jira-software-cloud-plugin/pull/143',
+    pr: '#143',
+    badge: 'PR',
+    repoDesc: 'Atlassian Jira Software Cloud Plugin',
+    desc: 'Resolved broken build and deployment URLs sent to Jira Cloud by engineering RunUrlProvider to properly percent-encode multibranch paths; backed with JenkinsRule integration tests.',
   },
 ]
 
