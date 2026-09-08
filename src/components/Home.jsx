@@ -1,6 +1,7 @@
 import {
   currentlyLearning,
   elsewhere,
+  openSource,
   previously,
   profile,
   projects,
@@ -45,6 +46,58 @@ export default function Home() {
               desc={p.desc}
               external={p.external}
             />
+          ))}
+        </Section>
+
+        <Section id="open-source" label="Open Source">
+          {openSource.map((item) => (
+            <div key={item.name} className="mb-4 last:mb-0">
+              <div className="flex flex-wrap items-baseline gap-x-2">
+                <a
+                  className="ulink text-[15px]"
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {item.name}
+                </a>
+                <span className="text-xs text-muted">({item.repoDesc})</span>
+                {item.prs ? (
+                  <span className="inline-flex items-center gap-1.5 text-xs text-muted">
+                    {item.prs.map((pr, idx) => (
+                      <span key={pr.label} className="inline-flex items-center gap-1.5">
+                        {idx > 0 && <span>·</span>}
+                        <a
+                          href={pr.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-mono text-xs text-muted underline decoration-line hover:text-ink"
+                        >
+                          {pr.label}
+                        </a>
+                      </span>
+                    ))}
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5">
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-mono text-xs text-muted underline decoration-line hover:text-ink"
+                    >
+                      PR {item.pr}
+                    </a>
+                    {item.badge && (
+                      <span className="rounded border border-line px-1.5 py-0.2 font-mono text-[10px] text-faint uppercase tracking-wider">
+                        {item.badge}
+                      </span>
+                    )}
+                  </span>
+                )}
+              </div>
+              <div className="mt-0.5 text-sm leading-snug text-muted">{item.desc}</div>
+            </div>
           ))}
         </Section>
 

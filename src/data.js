@@ -11,27 +11,58 @@ export const summary = {
   link: {
     href: 'https://project.synoptiq.abhiram.tech',
   },
-  rest: '  I build backend systems with Java, Spring Boot, and PostgreSQL. I enjoy designing secure REST APIs, solving real-world problems, and writing clean, maintainable software.',
+  rest: '  Java Backend Developer specializing in Java (8/17/21), Spring Boot, Spring Security, and Microservices architectures. Proven track record contributing to major open-source ecosystems (Apache Shiro, Kestra) resolving authentication and protocol-level bugs. Designing secure REST APIs, scalable distributed systems, and resilient data models.',
 }
 
 export const projects = [
   {
     name: 'Synoptiq',
     href: 'https://usesynoptiq.com',
-    desc: 'Productivity platform for email automation, workflow management, and Google Workspace integration.',
+    desc: 'Enterprise productivity platform featuring OAuth2 Google Sync (Gmail API), SSE token streaming, and JWT authentication.',
     external: true,
   },
   {
     name: 'RouteSphere',
     href: 'https://github.com/abhiramaab/routesphere-microservices',
-    desc: 'Microservices logistics platform with API Gateway, Eureka, and JWT auth.',
+    desc: 'Microservices logistics platform decomposed across 9 services with Spring Cloud Eureka, API Gateway, OpenFeign, and JWT auth.',
     external: true,
   },
   {
     name: 'WorkBoard',
     href: 'https://github.com/abhiramaab/workboard',
-    desc: 'Role-based project and task management backend with JPA and RBAC.',
+    desc: 'Modular REST backend for project and task management with JPA/Hibernate relational schemas, JPA Specifications, and RBAC.',
     external: true,
+  },
+]
+
+export const openSource = [
+  {
+    name: 'Apache Shiro',
+    href: 'https://github.com/apache/shiro/pull/2854',
+    pr: '#2854',
+    badge: 'Merged',
+    repoDesc: 'ASF Security Framework',
+    desc: 'Fixed Active Directory DN Authentication by resolving user principal name binding bug; validated and merged into official release 3.0.1.',
+  },
+  {
+    name: 'Kestra',
+    href: 'https://github.com/kestra-io/kestra/pull/19007',
+    pr: '#19007',
+    badge: 'PR',
+    prs: [
+      { label: 'Core #19007', href: 'https://github.com/kestra-io/kestra/pull/19007' },
+      { label: 'Telegram #51 (Merged)', href: 'https://github.com/kestra-io/plugin-telegram/pull/51' },
+    ],
+    repoDesc: 'Declarative Orchestration Engine (15k+ Stars)',
+    desc: 'Resolved Model Context Protocol (MCP) client auto health-check socket floods with regression test suite; added parseMode validation to Telegram plugin.',
+  },
+  {
+    name: 'Karate Championship Management App',
+    href: 'https://github.com/AthleticAvi/Karate-Championship-Management-App/pull/63',
+    pr: '#63',
+    badge: 'Merged',
+    repoDesc: 'Open Source Application',
+    desc: 'Refactored core logger fields to private static final modifiers to enforce clean OOP encapsulation and prevent logger state leakage.',
   },
 ]
 
@@ -50,15 +81,23 @@ export const currentlyLearning = [
 
 export const stack = {
   items: [
-    'Java',
+    'Java (8/17/21)',
     'Spring Boot',
-    'MySQL',
+    'Spring Security',
+    'Spring Data JPA',
+    'Hibernate',
+    'Microservices',
+    'Spring Cloud (Eureka, Gateway, OpenFeign)',
     'PostgreSQL',
+    'MySQL',
     'Docker',
     'AWS EC2',
-    'Git',
+    'Redis',
+    'RESTful APIs',
+    'JWT & OAuth2',
+    'Git & GitHub',
     'Maven',
-    'REST APIs',
+    'JUnit 5',
   ],
   subtitle: 'Mostly backend systems, APIs, and product.',
 }
@@ -72,6 +111,7 @@ export const elsewhere = [
 export const navSections = [
   { label: 'Summary', id: 'summary' },
   { label: 'Projects', id: 'projects' },
+  { label: 'Open Source', id: 'open-source' },
   { label: 'Previously', id: 'previously' },
   { label: 'Currently learning', id: 'currently-learning' },
   { label: 'Stack', id: 'stack' },

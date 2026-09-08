@@ -17,13 +17,15 @@
     <title>Abhirama</title>
     <meta name="theme-color" content="#fdfdfc" />
     <script>
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.classList.add('dark')
-        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#000000')
-      }
+      try {
+        if (localStorage.getItem('portfolio-theme-v2') === 'dark') {
+          document.documentElement.classList.add('dark')
+          document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#000000')
+        }
+      } catch (e) {}
     </script>
-    <script type="module" crossorigin src="/assets/index-NR_qVsmH.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Cw2FeJ4k.css">
+    <script type="module" crossorigin src="/assets/index-DgWEVsPD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CxqEPetl.css">
   </head>
   <body>
     <div id="root"></div>
