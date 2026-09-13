@@ -37,6 +37,17 @@ export const projects = [
 
 export const openSource = [
   {
+    name: 'Apache Hop',
+    href: 'https://github.com/apache/hop/pull/8344',
+    badge: 'Merged',
+    repoDesc: 'ASF Data Orchestration Platform',
+    prs: [
+      { label: 'PR #8344 (Merged)', href: 'https://github.com/apache/hop/pull/8344' },
+      { label: 'PR #8343 (Merged)', href: 'https://github.com/apache/hop/pull/8343' },
+    ],
+    desc: 'Fixed Hop Web stalled session bug via ServerPushSession UI keepalive (Issue #8327); suppressed redundant notification HTTP wire logs with regression test suite (Issue #8340). Both merged into Apache Hop.',
+  },
+  {
     name: 'Apache Shiro',
     href: 'https://github.com/apache/shiro/pull/2854',
     pr: '#2854',
