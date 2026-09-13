@@ -58,10 +58,13 @@ export const openSource = [
   {
     name: 'Jenkins',
     href: 'https://github.com/jenkinsci/atlassian-jira-software-cloud-plugin/pull/143',
-    pr: '#143',
     badge: 'PR',
-    repoDesc: 'Atlassian Jira Software Cloud Plugin',
-    desc: 'Resolved broken build and deployment URLs sent to Jira Cloud by engineering RunUrlProvider to properly percent-encode multibranch paths; backed with JenkinsRule integration tests.',
+    repoDesc: 'Workflow SCM Step & Jira Plugins',
+    prs: [
+      { label: 'Jira Plugin #143', href: 'https://github.com/jenkinsci/atlassian-jira-software-cloud-plugin/pull/143' },
+      { label: 'Workflow SCM #273', href: 'https://github.com/jenkinsci/workflow-scm-step-plugin/pull/273' },
+    ],
+    desc: 'Resolved broken build/deployment URLs in Jira Cloud plugin via RunUrlProvider branch path percent-encoding; eliminated redundant workspace baseline polling in Workflow SCM Step plugin.',
   },
   {
     name: 'Kestra',
