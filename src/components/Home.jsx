@@ -2,7 +2,6 @@ import {
   currentlyLearning,
   elsewhere,
   openSource,
-  previously,
   profile,
   projects,
   stack,
@@ -99,12 +98,6 @@ export default function Home() {
               <div className="mt-0.5 text-sm leading-snug text-muted">{item.desc}</div>
             </div>
           ))}
-        </Section>
-
-        <Section id="previously" label="Previously">
-          <p className="text-[15px] leading-relaxed text-body">
-            {previously.text} {previously.rest}
-          </p>
         </Section>
 
         <Section id="currently-learning" label="Currently learning">

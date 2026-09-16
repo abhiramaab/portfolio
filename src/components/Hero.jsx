@@ -75,10 +75,8 @@ export default function Hero() {
           I build backend systems with{' '}
           <span className="text-ink font-medium">Java</span>,{' '}
           <span className="text-ink font-medium">Spring Boot</span>, and{' '}
-          <span className="text-ink font-medium">MySQL</span> — APIs, authentication, and
-          services designed to run cleanly in production. Before this, I spent 4.5+ years
-          running eCommerce operations across 7+ marketplaces, which is where I picked up a
-          habit for systems that don't break under real-world mess.
+          <span className="text-ink font-medium">PostgreSQL / MySQL</span> — APIs, authentication, and
+          distributed services designed to run cleanly in production.
         </p>
 
         <div className="fade-up flex items-center gap-2 text-sm text-muted mb-8">

@@ -80,10 +80,6 @@ export const openSource = [
   },
 ]
 
-export const previously = {
-  text: 'Before backend development, I spent 4.5+ years running eCommerce operations across 7+ marketplaces — inventory, fulfillment, and the kind of operational chaos that teaches you what production actually means. Now I build backend systems with',
-  rest: 'Java & Spring Boot — APIs, authentication, and services designed to run cleanly in production.',
-}
 
 export const currentlyLearning = [
   'System Design',
@@ -126,7 +122,6 @@ export const navSections = [
   { label: 'Summary', id: 'summary' },
   { label: 'Projects', id: 'projects' },
   { label: 'Open Source', id: 'open-source' },
-  { label: 'Previously', id: 'previously' },
   { label: 'Currently learning', id: 'currently-learning' },
   { label: 'Stack', id: 'stack' },
   { label: 'Elsewhere', id: 'elsewhere' },
