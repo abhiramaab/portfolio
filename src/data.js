@@ -45,12 +45,12 @@ export const openSource = [
     desc: 'Implemented passwordless Azure Managed Identity authentication for Git repos in Spring Cloud Config (+706 lines); acquired Azure tokens and injected Bearer headers into JGit HTTP transport with fallback.',
   },
   {
-    name: 'Spring Boot Admin',
+    name: 'codecentric / Spring Boot Admin',
     href: 'https://github.com/codecentric/spring-boot-admin/pull/5584',
     pr: '#5584',
     badge: 'Merged',
     repoDesc: 'Centralized Microservices Management & Monitoring',
-    desc: 'Implemented configurable browser notification timeouts via server-side application properties and deep-link navigation directly to instance details for single-instance status changes with Vitest tests (+148 lines).',
+    desc: 'Implemented configurable browser notification timeouts via server-side application properties and deep-link navigation directly to instance details for single-instance status changes with Vitest tests (Issue #5504, +148 lines).',
   },
   {
     name: 'Apache Camel',
