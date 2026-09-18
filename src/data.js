@@ -11,7 +11,7 @@ export const summary = {
   link: {
     href: 'https://usesynoptiq.com',
   },
-  rest: '  Java Backend Developer specializing in Java (8/17/21), Spring Boot, Spring Security, and Microservices architectures. Proven track record contributing to major open-source ecosystems (Spring Cloud, Apache Camel, Apache Shiro, Apache Hop, Jenkins, Kestra) resolving cloud authentication, Kafka transport, and concurrency defects. Designing secure REST APIs, scalable distributed systems, and resilient data models.',
+  rest: '  Java Backend Developer specializing in Java (8/17/21), Spring Boot, Spring Security, and Microservices architectures. Proven track record contributing to major open-source ecosystems (Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, Kestra) resolving cloud authentication, Kafka transport, and concurrency defects. Designing secure REST APIs, scalable distributed systems, and resilient data models.',
 }
 
 export const projects = [
@@ -43,6 +43,14 @@ export const openSource = [
     badge: 'Merged',
     repoDesc: 'Distributed Configuration & Microservices Engine',
     desc: 'Implemented passwordless Azure Managed Identity authentication for Git repos in Spring Cloud Config (+706 lines); acquired Azure tokens and injected Bearer headers into JGit HTTP transport with fallback.',
+  },
+  {
+    name: 'Spring Boot Admin',
+    href: 'https://github.com/codecentric/spring-boot-admin/pull/5584',
+    pr: '#5584',
+    badge: 'Merged',
+    repoDesc: 'Centralized Microservices Management & Monitoring',
+    desc: 'Implemented configurable browser notification timeouts via server-side application properties and deep-link navigation directly to instance details for single-instance status changes with Vitest tests (+148 lines).',
   },
   {
     name: 'Apache Camel',
