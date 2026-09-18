@@ -23,8 +23,8 @@ export const projects = [
   },
   {
     name: 'RouteSphere',
-    href: 'https://github.com/abhiramaab/routesphere-microservices',
-    desc: 'Microservices logistics platform decomposed across 9 services with Spring Cloud Eureka, API Gateway, OpenFeign, and JWT auth.',
+    href: 'https://routesphere.abhiram.tech/',
+    desc: 'Logistics and fleet operations platform with Spring Boot backend, Spring Data JPA, JWT auth, and interactive live tracking dashboard.',
     external: true,
   },
   {
