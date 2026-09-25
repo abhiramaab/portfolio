@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Abhirama',
-  role: 'Backend Developer',
+  role: 'Self-Taught Backend Developer',
   tagline: "from ops chaos to deterministic backends — building software that holds up.",
   email: 'abhiram.b@icloud.com',
   github: 'https://github.com/abhiramaab',
@@ -11,7 +11,7 @@ export const summary = {
   link: {
     href: 'https://usesynoptiq.com',
   },
-  rest: '  Java Backend Developer specializing in Java (8/17/21), Spring Boot, Spring Security, and Microservices architectures. Proven track record contributing to major open-source ecosystems (Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, Kestra) resolving cloud authentication, Kafka transport, and concurrency defects. Designing secure REST APIs, scalable distributed systems, and resilient data models.',
+  rest: '  Self-taught Java Backend Developer specializing in Java (8/17/21), Spring Boot, Spring Security, and Microservices architectures. Proven track record contributing to major open-source ecosystems (Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, Kestra) resolving cloud authentication, Kafka transport, and concurrency defects. Designing secure REST APIs, scalable distributed systems, and resilient data models.',
 }
 
 export const projects = [
