@@ -20,6 +20,7 @@ export const projects = [
     href: 'https://loompay.abhiram.tech',
     tagline: 'Payment gateway with Idempotency, distributed locks, outbox events, and ledger bookkeeping.',
     github: 'https://github.com/abhiramaab/loompay',
+    docs: 'https://github.com/abhiramaab/loompay/blob/main/docs/ARCHITECTURE.md',
     live: 'https://loompay.abhiram.tech',
     description: 'Payment backend built in Java 21 and Spring Boot. Implements Idempotency (double-checked locking) and Redis distributed locks to stop duplicate charges, an outbox table to reliably deliver webhooks, consistent hashing to route merchants, and double-entry accounting to track balances.',
     desc: 'Payment backend with Idempotency, Redis distributed locks, Transactional Outbox event dispatching, Consistent Hashing routing, and double-entry accounting.',
@@ -29,12 +30,14 @@ export const projects = [
   {
     name: 'Synoptiq',
     href: 'https://usesynoptiq.com',
+    docs: 'https://github.com/abhiramaab/synoptiq-docs',
     desc: 'Productivity platform that syncs Gmail and Google Calendar via OAuth2, with HTTP/2 multiplexing, SSE streaming, and JWT auth.',
     external: true,
   },
   {
     name: 'RouteSphere',
     href: 'https://routesphere.abhiram.tech/',
+    docs: 'https://github.com/abhiramaab/RouteSphere/blob/main/docs/ARCHITECTURE.md',
     desc: 'Logistics and fleet operations platform with Spring Boot backend, Spring Data JPA, JWT auth, and interactive live tracking dashboard.',
     external: true,
   },
