@@ -16,6 +16,17 @@ export const summary = {
 
 export const projects = [
   {
+    name: 'LoomPay',
+    href: 'https://loompay.abhiram.tech',
+    tagline: 'Payment gateway with Idempotency, distributed locks, outbox events, and ledger bookkeeping.',
+    github: 'https://github.com/abhiramaab/loompay',
+    live: 'https://loompay.abhiram.tech',
+    description: 'Payment backend built in Java 21 and Spring Boot. Implements Idempotency (double-checked locking) and Redis distributed locks to stop duplicate charges, an outbox table to reliably deliver webhooks, consistent hashing to route merchants, and double-entry accounting to track balances.',
+    desc: 'Payment backend with Idempotency, Redis distributed locks, Transactional Outbox event dispatching, Consistent Hashing routing, and double-entry accounting.',
+    tags: ['Java 21', 'Spring Boot', 'Idempotency', 'Distributed Locks', 'Redis', 'PostgreSQL', 'System Design', 'Docker'],
+    external: true,
+  },
+  {
     name: 'Synoptiq',
     href: 'https://usesynoptiq.com',
     desc: 'Productivity platform that syncs Gmail and Google Calendar via OAuth2, with HTTP/2 multiplexing, SSE streaming, and JWT auth.',
@@ -25,17 +36,6 @@ export const projects = [
     name: 'RouteSphere',
     href: 'https://routesphere.abhiram.tech/',
     desc: 'Logistics and fleet operations platform with Spring Boot backend, Spring Data JPA, JWT auth, and interactive live tracking dashboard.',
-    external: true,
-  },
-  {
-    name: 'LoomPay',
-    href: 'https://loompay.abhiram.tech',
-    tagline: 'Payment gateway with Idempotency, distributed locks, outbox events, and ledger bookkeeping.',
-    github: 'https://github.com/abhiramaab/loompay',
-    live: 'https://loompay.abhiram.tech',
-    description: 'Payment backend built in Java 21 and Spring Boot. Implements Idempotency (double-checked locking) and Redis distributed locks to stop duplicate charges, an outbox table to reliably deliver webhooks, consistent hashing to route merchants, and double-entry accounting to track balances.',
-    desc: 'Payment backend with Idempotency, Redis distributed locks, Transactional Outbox event dispatching, Consistent Hashing routing, and double-entry accounting.',
-    tags: ['Java 21', 'Spring Boot', 'Idempotency', 'Distributed Locks', 'Redis', 'PostgreSQL', 'System Design', 'Docker'],
     external: true,
   },
 ]
