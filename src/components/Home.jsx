@@ -43,6 +43,7 @@ export default function Home() {
               href={p.href}
               name={p.name}
               desc={p.desc}
+              docs={p.docs}
               external={p.external}
             />
           ))}
