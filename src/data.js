@@ -11,7 +11,7 @@ export const summary = {
   link: {
     href: 'https://usesynoptiq.com',
   },
-  rest: '  Self-taught backend developer working in Java (8/17/21), Spring Boot, Spring Security, and microservices. I contribute patches to open-source projects including Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, and Kestra, fixing bugs in authentication, Kafka transport, and concurrency. I build REST APIs, distributed workflows, and backend data models.',
+  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, and Kestra, fixing bugs in authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
 }
 
 export const projects = [
