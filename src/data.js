@@ -11,14 +11,14 @@ export const summary = {
   link: {
     href: 'https://usesynoptiq.com',
   },
-  rest: '  Self-taught Java Backend Developer specializing in Java (8/17/21), Spring Boot, Spring Security, and Microservices architectures. Proven track record contributing to major open-source ecosystems (Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, Kestra) resolving cloud authentication, Kafka transport, and concurrency defects. Designing secure REST APIs, scalable distributed systems, and resilient data models.',
+  rest: '  Self-taught backend developer working in Java (8/17/21), Spring Boot, Spring Security, and microservices. I contribute patches to open-source projects including Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, and Kestra, fixing bugs in authentication, Kafka transport, and concurrency. I build REST APIs, distributed workflows, and backend data models.',
 }
 
 export const projects = [
   {
     name: 'Synoptiq',
     href: 'https://usesynoptiq.com',
-    desc: 'Enterprise productivity platform featuring OAuth2 Google Sync (Gmail API), HTTP/2 multiplexing, SSE token streaming, and JWT authentication.',
+    desc: 'Productivity platform that syncs Gmail and Google Calendar via OAuth2, with HTTP/2 multiplexing, SSE streaming, and JWT auth.',
     external: true,
   },
   {
