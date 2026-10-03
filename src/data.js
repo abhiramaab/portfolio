@@ -11,7 +11,7 @@ export const summary = {
   link: {
     href: 'https://usesynoptiq.com',
   },
-  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, and Kestra, fixing bugs in authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
+  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Apache BifroMQ, Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, and Kestra, fixing bugs in distributed MQTT brokers, authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
 }
 
 export const projects = [
@@ -44,6 +44,14 @@ export const projects = [
 ]
 
 export const openSource = [
+  {
+    name: 'Apache BifroMQ',
+    href: 'https://github.com/apache/bifromq/pull/314',
+    pr: '#314',
+    badge: 'PR',
+    repoDesc: 'Distributed MQTT Broker (High-Performance Engine)',
+    desc: 'Aligned Netty decoder buffer boundaries with MQTT variable-length integer framing and enforced negotiated packet size limits during session message delivery, cleanly dropping oversize packets (Issue #313).',
+  },
   {
     name: 'Spring Cloud',
     href: 'https://github.com/spring-cloud/spring-cloud-config/pull/3272',
