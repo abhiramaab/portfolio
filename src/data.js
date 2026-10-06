@@ -22,9 +22,9 @@ export const projects = [
     github: 'https://github.com/abhiramaab/loompay',
     docs: 'https://github.com/abhiramaab/loompay/blob/main/docs/ARCHITECTURE.md',
     live: 'https://loompay.abhiram.tech',
-    description: 'Payment backend built in Java 21 and Spring Boot. Implements Idempotency (double-checked locking) and Redis distributed locks to stop duplicate charges, an outbox table to reliably deliver webhooks, consistent hashing to route merchants, and double-entry accounting to track balances.',
-    desc: 'Payment backend with Idempotency, Redis distributed locks, Transactional Outbox event dispatching, Consistent Hashing routing, and double-entry accounting.',
-    tags: ['Java 21', 'Spring Boot', 'Idempotency', 'Distributed Locks', 'Redis', 'PostgreSQL', 'System Design', 'Docker'],
+    description: 'Payment backend built in Java 21 and Spring Boot. Implements Idempotency (double-checked locking) and Redis distributed locks to stop duplicate charges, Redis ZSET sliding-window rate limiting to prevent downstream service overload, an outbox table to reliably deliver webhooks, consistent hashing to route merchants, and double-entry accounting to track balances.',
+    desc: 'Payment backend with Idempotency, Redis distributed locks, Redis ZSET sliding-window rate limiting, Transactional Outbox event dispatching, and double-entry accounting.',
+    tags: ['Java 21', 'Spring Boot', 'Rate Limiting (ZSET)', 'Idempotency', 'Distributed Locks', 'Redis', 'PostgreSQL', 'Docker'],
     external: true,
   },
   {
