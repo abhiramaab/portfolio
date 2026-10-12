@@ -41,6 +41,18 @@ export const projects = [
     desc: 'Logistics and fleet operations platform with Spring Boot backend, Spring Data JPA, JWT auth, and interactive live tracking dashboard.',
     external: true,
   },
+  {
+    name: 'Velt',
+    href: 'https://velt.cloud',
+    tagline: 'AI-native design generation platform synthesizing production-ready UI documents and design systems.',
+    github: 'https://github.com/abhiramaab/velt',
+    docs: 'https://github.com/abhiramaab/velt',
+    live: 'https://velt.cloud',
+    description: 'AI-native design platform synthesizing production-ready digital design documents, responsive prototypes, and design systems directly from natural language prompts. Built with Next.js 15 (App Router), React 19, TypeScript, Java 21, Spring Boot 3.5, Supabase, and OpenAI GPT-4o strict JSON schema enforcement.',
+    desc: 'AI design platform synthesizing production-ready UI documents, responsive prototypes, and design systems from natural language via Next.js 15, Spring Boot 3.5, and OpenAI structured schema inference.',
+    tags: ['Java 21', 'Spring Boot 3.5', 'Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'OpenAI GPT-4o', 'Supabase'],
+    external: true,
+  },
 ]
 
 export const openSource = [
