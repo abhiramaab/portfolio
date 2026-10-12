@@ -135,7 +135,7 @@
 <div class="section">
   <div class="section-title">Summary</div>
   <div style="font-size: 8.8pt; text-align: justify; line-height: 1.25;">
-    <b>Java Backend Developer</b> working with <b>Java (8/17/21)</b>, <b>Spring Boot</b>, <b>Spring Security</b>, and <b>Microservices</b>. Contributed to production open-source engines (<b>Spring Cloud</b>, <b>Spring Boot Admin</b>, <b>Apache Camel</b>, <b>Apache Shiro</b>, <b>Kestra</b>), resolving core defects in cloud authentication, Kafka event transport, and concurrency. Background includes 4+ years managing supply chain, SAP ERP, and e-commerce marketplace operations.
+    Self-taught backend developer building distributed services and event pipelines with <b>Java</b>, <b>Spring Boot</b>, and <b>Spring Security</b>. I fix bugs and contribute patches to large open-source codebases (<b>Apache BifroMQ</b>, <b>Spring Cloud</b>, <b>Spring Boot Admin</b>, <b>Apache Camel</b>, <b>Apache Shiro</b>, <b>Kestra</b>) spanning authentication, Kafka transport, and concurrency. Before this I spent four years in supply chain and ERP operations.
   </div>
 </div>
 
@@ -144,73 +144,74 @@
   <div class="section-title">Technical Skills</div>
   <div class="skills-list">
     <div><span class="skills-category">Languages & Frameworks:</span> Java (8/17/21), Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate</div>
-    <div><span class="skills-category">Architecture & System Design:</span> System Design (HLD & LLD), Microservices, Load Balancing, RESTful APIs, Spring Cloud, JWT, OAuth2</div>
+    <div><span class="skills-category">Architecture & System Design:</span> System Design (HLD & LLD), Idempotency, Distributed Locks, Transactional Outbox, Consistent Hashing, Double-Entry Ledger, Microservices, Spring Cloud</div>
     <div><span class="skills-category">Databases & Caching:</span> PostgreSQL, MySQL, Redis (Caching Strategies), Database Indexing, Query Optimization</div>
-    <div><span class="skills-category">DevOps & Tooling:</span> Docker, Git, GitHub, Maven, AWS (EC2), Linux (Bash), Swagger/OpenAPI, Postman, JUnit 5</div>
+    <div><span class="skills-category">DevOps & Tooling:</span> Docker, Git, GitHub, Maven, AWS (EC2), Linux (Bash), Swagger/OpenAPI, Postman, JUnit 5, GitHub Copilot</div>
   </div>
 </div>
 
 <!-- OPEN SOURCE CONTRIBUTIONS -->
 <div class="section">
   <div class="section-title">Open Source Contributions</div>
+  <div style="font-size: 8.5pt; font-style: italic; margin-bottom: 3px;">Merged pull requests into production projects:</div>
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Spring Cloud <span class="entry-subtitle">| Distributed Configuration & Microservices Engine (Merged)</span></span>
-      <span class="entry-date"><a href="https://github.com/spring-cloud/spring-cloud-config/pull/3272">PR #3272 (Merged)</a></span>
+      <span class="entry-title">Spring Cloud Config <span class="entry-subtitle">| Server-side config for distributed systems</span></span>
+      <span class="entry-date"><a href="https://github.com/spring-cloud/spring-cloud-config/pull/3272">PR #3272</a></span>
     </div>
     <ul>
-      <li><b>Azure DevOps Workload Identity Authentication:</b> Implemented passwordless Azure Managed Identity authentication for Git repos in Spring Cloud Config (+706 lines); acquired Azure tokens and injected Bearer headers into JGit HTTP transport with fallback.</li>
+      <li>Added passwordless Azure Managed Identity auth so Config Server can pull Git repos as a managed identity, on top of the existing PAT and SSH options. Acquires the token and injects it as a Bearer header into JGit's HTTP transport, falling back to the old path if unavailable.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">codecentric / Spring Boot Admin <span class="entry-subtitle">| Centralized Microservices Monitoring (Merged)</span></span>
-      <span class="entry-date"><a href="https://github.com/codecentric/spring-boot-admin/pull/5584">PR #5584 (Merged)</a></span>
+      <span class="entry-title">Apache BifroMQ <span class="entry-subtitle">| High-performance distributed MQTT broker</span></span>
+      <span class="entry-date"><a href="https://github.com/apache/bifromq/pull/314">PR #314</a> (<a href="https://github.com/apache/bifromq/pull/315">Merged via #315</a>)</span>
     </div>
     <ul>
-      <li><b>Configurable Browser Notifications & Deep-Linking (Issue #5504):</b> Added server-side timeout configuration for UI notifications; implemented single-instance status change click-through navigation to instance details with Vitest test coverage (+148 lines).</li>
+      <li>Diagnosed QoS 1 subscriber stall caused by Netty decoder vs. packet-sizer mismatch (Issue #313); authored fix aligning variable-length integer framing and drop-and-confirm delivery semantics, integrated into main via PR #315.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Apache Camel <span class="entry-subtitle">| ASF Enterprise Integration & Event-Driven Framework (Merged)</span></span>
-      <span class="entry-date"><a href="https://github.com/apache/camel-kamelets/pull/3039">PR #3039 (Merged)</a></span>
+      <span class="entry-title">Spring Boot Admin <span class="entry-subtitle">| Monitoring UI for Spring applications</span></span>
+      <span class="entry-date"><a href="https://github.com/codecentric/spring-boot-admin/pull/5584">PR #5584</a></span>
     </div>
     <ul>
-      <li><b>Kafka Transport Hop Key Preservation:</b> Resolved Kafka record key loss across HTTP hops by configuring kafka-sink Kamelet to map standard kafka-key and CloudEvents ce-kafkakey headers to CamelKafkaKey.</li>
+      <li>Made the notification popup timeout configurable (it was hardcoded). Clicking a single-instance alert now jumps straight to that instance's detail page instead of the list. Backed by a Vitest case for the routing change.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Apache Shiro <span class="entry-subtitle">| ASF Security & Authentication Framework (Merged)</span></span>
-      <span class="entry-date"><a href="https://github.com/apache/shiro/pull/2854">PR #2854 (Merged)</a></span>
+      <span class="entry-title">Camel Kamelets <span class="entry-subtitle">| Reusable connectors for Apache Camel</span></span>
+      <span class="entry-date"><a href="https://github.com/apache/camel-kamelets/pull/3039">PR #3039</a></span>
     </div>
     <ul>
-      <li><b>Fixed Active Directory DN Authentication:</b> Resolved Active Directory user principal name binding bug; validated and <b>merged</b> into official Apache Shiro release 3.0.1.</li>
+      <li>Kafka record keys were dropping whenever a message crossed an HTTP hop, which broke per-key ordering downstream. Mapped the standard kafka-key and CloudEvents ce-kafkakey headers through to CamelKafkaKey in the kafka-sink Kamelet.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Apache Hop <span class="entry-subtitle">| Data Orchestration Platform (ASF Top-Level -- 2 Merged)</span></span>
-      <span class="entry-date"><a href="https://github.com/apache/hop/pull/8344">PR #8344 (Merged)</a> | <a href="https://github.com/apache/hop/pull/8343">PR #8343 (Merged)</a></span>
+      <span class="entry-title">Apache Shiro <span class="entry-subtitle">| Authentication and authorization framework</span></span>
+      <span class="entry-date"><a href="https://github.com/apache/shiro/pull/2854">PR #2854</a></span>
     </div>
     <ul>
-      <li><b>Hop Web Session Refresh & Wire Logging:</b> Resolved UI thread refresh freezes by maintaining active ServerPushSession state; silenced high-frequency HTTP wire logging during background polling.</li>
+      <li>Fixed a user principal name binding bug that broke Active Directory DN logins. Shipped in Shiro 3.0.1.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Kestra <span class="entry-subtitle">| Declarative Orchestration Engine (15k+ Stars -- 2 Merged)</span></span>
-      <span class="entry-date"><a href="https://github.com/kestra-io/kestra/pull/19007">PR #19007 (Merged)</a> | <a href="https://github.com/kestra-io/plugin-telegram/pull/51">PR #51 (Merged)</a></span>
+      <span class="entry-title">Kestra <span class="entry-subtitle">| Declarative orchestration engine</span></span>
+      <span class="entry-date"><a href="https://github.com/kestra-io/kestra/pull/19007">#19007</a> | <a href="https://github.com/kestra-io/plugin-telegram/pull/51">#51</a></span>
     </div>
     <ul>
-      <li><b>Core Engine & Plugins (Merged):</b> Resolved MCP client auto health-check socket leaks across builder instances (Issue #18981); added case-sensitive enum validation for Telegram plugin payloads.</li>
+      <li>Closed a socket leak in the MCP client's auto health check that occurred once per builder instance, and added case-sensitive enum validation to the Telegram plugin's ParseMode so a typo fails fast with a clear message instead of a 400 from Telegram.</li>
     </ul>
   </div>
 </div>
@@ -221,36 +222,38 @@
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Synoptiq <span class="entry-subtitle">| Java, Spring Boot, Spring Security, PostgreSQL, Docker, AWS EC2, HTTP/2</span></span>
-      <span class="entry-date"><a href="https://github.com/abhiramaab/synoptiq">[Code]</a> | <a href="https://usesynoptiq.com">[Demo]</a></span>
+      <span class="entry-title">LoomPay <span class="entry-subtitle">| Java 21, Spring Boot, Redis, PostgreSQL, Docker, System Design</span></span>
+      <span class="entry-date"><a href="https://loompay.abhiram.tech">[Demo]</a> | <a href="https://github.com/abhiramaab/loompay">[Code]</a> | <a href="https://github.com/abhiramaab/loompay/blob/main/docs/ARCHITECTURE.md">[Docs]</a></span>
     </div>
     <ul>
-      <li>Built a workflow automation platform integrating OAuth2 Google Sync and Gmail API to capture and sync inbox records into PostgreSQL.</li>
-      <li>Enabled <b>HTTP/2 multiplexing</b> to support concurrent API calls and real-time Server-Sent Events (SSE) over a single persistent TCP connection.</li>
-      <li>Handled authentication and access control via stateless <b>JWT filter chains</b> and cookie-based session tokens.</li>
+      <li>Built payment service with <b>Idempotency</b> (double-checked locking) and <b>Distributed Locks</b> (Redis SET NX EX) to stop duplicate charges during concurrent payment requests.</li>
+      <li>Built a distributed <b>sliding-window rate limiter</b> using <b>Redis Sorted Sets (ZSET)</b> and a Spring <b>HandlerInterceptor</b> to throttle requests per merchant with <b>HTTP 429 Retry-After</b> headers, preventing downstream service overload during traffic spikes.</li>
+      <li>Wired <b>Transactional Outbox Pattern</b> with a scheduled worker and retry limits so webhook events never drop when the network fails.</li>
+      <li>Designed <b>Consistent Hashing ring router</b> with virtual nodes for load distribution, and <b>Double-Entry Ledger</b> for financial balance consistency.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Routesphere <span class="entry-subtitle">| Spring Boot, Spring Cloud (Eureka, API Gateway, OpenFeign), Docker, JWT</span></span>
-      <span class="entry-date"><a href="https://github.com/abhiramaab/RouteSphere">[Code]</a> | <a href="https://routesphere.abhiram.tech/">[Demo]</a></span>
+      <span class="entry-title">Synoptiq <span class="entry-subtitle">| Java, Spring Boot, Spring Security, PostgreSQL, Docker, AWS EC2</span></span>
+      <span class="entry-date"><a href="https://usesynoptiq.com">[Demo]</a> | <a href="https://github.com/abhiramaab/synoptiq-docs">[Docs]</a></span>
     </div>
     <ul>
-      <li>Decomposed logistics dispatch, order fulfillment, and tracking into <b>9 independent Spring Boot microservices</b>.</li>
-      <li>Set up <b>Spring Cloud Netflix Eureka</b> for dynamic service discovery and routed traffic through <b>Spring Cloud Gateway</b> with centralized JWT validation.</li>
-      <li>Implemented synchronous inter-service communication using <b>OpenFeign clients</b> with client-side load balancing.</li>
+      <li>Workflow automation platform syncing Gmail and Google Calendar via OAuth2 and stateless JWT auth, storing records in PostgreSQL.</li>
+      <li>Turned on HTTP/2 multiplexing so concurrent API calls and Server-Sent Events share one persistent TCP connection.</li>
+      <li>Implemented background OAuth token refresh lifecycle and exponential backoff retry policies for Google API rate limits.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Workboard <span class="entry-subtitle">| Java, Spring Boot, Spring Data JPA, Hibernate, MySQL, Spring Security</span></span>
-      <span class="entry-date"><a href="https://github.com/abhiramaab">[Repository]</a></span>
+      <span class="entry-title">Routesphere <span class="entry-subtitle">| Spring Boot, Spring Cloud, Eureka, Gateway, OpenFeign, Docker</span></span>
+      <span class="entry-date"><a href="https://routesphere.abhiram.tech/">[Demo]</a> | <a href="https://github.com/abhiramaab/RouteSphere">[Code]</a> | <a href="https://github.com/abhiramaab/RouteSphere/blob/main/docs/ARCHITECTURE.md">[Docs]</a></span>
     </div>
     <ul>
-      <li>Developed a modular REST backend managing project workflows, task delegation, and role-based permissions across teams.</li>
-      <li>Designed relational data models using <b>Spring Data JPA/Hibernate</b> with custom dynamic filtering and pagination via JPA Specifications.</li>
+      <li>Logistics dispatch app split into 9 Spring Boot services covering orders, dispatch, and tracking.</li>
+      <li>Eureka handles service discovery and Spring Cloud Gateway routes traffic with JWT validation done once at the edge.</li>
+      <li>Services talk to each other over OpenFeign with client-side load balancing.</li>
     </ul>
   </div>
 </div>
@@ -260,7 +263,7 @@
   <div class="section-title">Experience</div>
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">E-Commerce & Supply Chain Operations</span>
+      <span class="entry-title">Supply Chain & ERP Operations</span>
       <span class="entry-date">2021 – 2026</span>
     </div>
     <div class="entry-sub">
@@ -268,8 +271,8 @@
       <span>Bengaluru, India</span>
     </div>
     <ul>
-      <li><b>Data & ERP Systems:</b> Managed SKU catalogs, multi-channel order pipelines, and SAP ERP inventory reconciliation across 7+ online marketplaces (Amazon, Flipkart, Myntra), maintaining 99%+ data accuracy.</li>
-      <li><b>Operations & Logistics:</b> Coordinated regional fulfillment workflows and warehouse routing pipelines; leveraged this direct operational experience with logistics bottlenecks and inventory flows to transition into designing resilient enterprise backend architectures.</li>
+      <li>Ran SKU catalogs, order pipelines, and SAP ERP inventory reconciliation across 7 marketplaces including Amazon, Flipkart, and Myntra.</li>
+      <li>Coordinated warehouse routing and regional fulfillment for a mid-size 3PL operation.</li>
     </ul>
   </div>
 </div>
@@ -283,7 +286,7 @@
       <span class="entry-date">Expected 2028</span>
     </div>
     <div class="entry-sub">
-      <span>Bachelor of Computer Applications (BCA) - Online (100% available for full-time work)</span>
+      <span>Bachelor of Computer Applications (BCA), Online</span>
       <span>Mysuru, Karnataka</span>
     </div>
   </div>

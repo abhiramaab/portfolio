@@ -11,7 +11,7 @@ export const summary = {
   link: {
     href: 'https://usesynoptiq.com',
   },
-  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Apache BifroMQ, Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, and Kestra, fixing bugs in distributed MQTT brokers, authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
+  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Apache BifroMQ, Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, and Kestra, fixing bugs in distributed MQTT brokers, authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
 }
 
 export const projects = [
@@ -46,11 +46,13 @@ export const projects = [
 export const openSource = [
   {
     name: 'Apache BifroMQ',
-    href: 'https://github.com/apache/bifromq/pull/314',
-    pr: '#314',
-    badge: 'PR',
+    badge: 'Integrated',
     repoDesc: 'Distributed MQTT Broker (High-Performance Engine)',
-    desc: 'Aligned Netty decoder buffer boundaries with MQTT variable-length integer framing and enforced negotiated packet size limits during session message delivery, cleanly dropping oversize packets (Issue #313).',
+    prs: [
+      { label: 'PR #314', href: 'https://github.com/apache/bifromq/pull/314' },
+      { label: 'PR #315 (Merged)', href: 'https://github.com/apache/bifromq/pull/315' },
+    ],
+    desc: 'Diagnosed QoS 1 persistent subscriber deadlock caused by inbound Netty decoder & outbound packet-sizer mismatch (Issue #313); authored varint-aware boundary limits and drop-and-confirm delivery semantics in PR #314, integrated into main via PR #315.',
   },
   {
     name: 'Spring Cloud',
@@ -105,17 +107,6 @@ export const openSource = [
       { label: 'Telegram #51 (Merged)', href: 'https://github.com/kestra-io/plugin-telegram/pull/51' },
     ],
     desc: 'Resolved Model Context Protocol (MCP) client auto health-check socket leaks across builder instances (Issue #18981); added case-sensitive enum validation for Telegram plugin.',
-  },
-  {
-    name: 'Jenkins',
-    href: 'https://github.com/jenkinsci/atlassian-jira-software-cloud-plugin/pull/143',
-    badge: 'PR',
-    repoDesc: 'Workflow SCM Step & Jira Plugins',
-    prs: [
-      { label: 'Jira Plugin #143', href: 'https://github.com/jenkinsci/atlassian-jira-software-cloud-plugin/pull/143' },
-      { label: 'Workflow SCM #273', href: 'https://github.com/jenkinsci/workflow-scm-step-plugin/pull/273' },
-    ],
-    desc: 'Resolved broken build/deployment URLs in Jira Cloud plugin via RunUrlProvider branch path percent-encoding; eliminated redundant workspace baseline polling in Workflow SCM Step plugin.',
   },
 ]
 
