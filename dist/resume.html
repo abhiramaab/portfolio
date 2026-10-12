@@ -30,7 +30,7 @@
     font-size: 8.6pt;
   }
 
-  /* Jake's Resume Header */
+  /* Header */
   .header {
     text-align: center;
     margin-bottom: 4px;
@@ -135,7 +135,7 @@
 <div class="section">
   <div class="section-title">Summary</div>
   <div style="font-size: 8.8pt; text-align: justify; line-height: 1.25;">
-    Self-taught backend developer building distributed services and event pipelines with <b>Java</b>, <b>Spring Boot</b>, and <b>Spring Security</b>. I fix bugs and contribute patches to large open-source codebases (<b>Apache BifroMQ</b>, <b>Spring Cloud</b>, <b>Spring Boot Admin</b>, <b>Apache Camel</b>, <b>Apache Shiro</b>, <b>Kestra</b>) spanning authentication, Kafka transport, and concurrency. Before this I spent four years in supply chain and ERP operations.
+    Self-taught backend developer building high-reliability services, RESTful APIs, and event-driven pipelines with <b>Java</b>, <b>Spring Boot</b>, and <b>PostgreSQL</b>. Active contributor to core open-source infrastructure (<b>Apache BifroMQ</b>, <b>Spring Cloud</b>, <b>Apache Camel</b>, <b>Kestra</b>) spanning authentication, Kafka messaging, and distributed coordination. 4 years of supply chain & ERP operations background with strong systems execution.
   </div>
 </div>
 
@@ -143,10 +143,10 @@
 <div class="section">
   <div class="section-title">Technical Skills</div>
   <div class="skills-list">
-    <div><span class="skills-category">Languages & Frameworks:</span> Java (8/17/21), Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate</div>
-    <div><span class="skills-category">Architecture & System Design:</span> System Design (HLD & LLD), Idempotency, Distributed Locks, Transactional Outbox, Consistent Hashing, Double-Entry Ledger, Microservices, Spring Cloud</div>
-    <div><span class="skills-category">Databases & Caching:</span> PostgreSQL, MySQL, Redis (Caching Strategies), Database Indexing, Query Optimization</div>
-    <div><span class="skills-category">DevOps & Tooling:</span> Docker, Git, GitHub, Maven, AWS (EC2), Linux (Bash), Swagger/OpenAPI, Postman, JUnit 5, GitHub Copilot</div>
+    <div><span class="skills-category">Languages & Frameworks:</span> Java (8/17/21), Spring Boot, Spring Cloud, Spring Security, Spring Data JPA, Hibernate, SQL</div>
+    <div><span class="skills-category">Architecture & System Design:</span> Distributed Systems, RESTful APIs, Microservices, Idempotency, Distributed Locks, Transactional Outbox, HLD & LLD</div>
+    <div><span class="skills-category">Databases & Caching:</span> PostgreSQL, MySQL, Redis (Caching & Distributed Locking), Database Indexing, Query Optimization</div>
+    <div><span class="skills-category">DevOps & Tooling:</span> Docker, Git, GitHub, Maven, AWS (EC2), Linux (Bash), Kafka, Swagger/OpenAPI, Postman, JUnit 5, GitHub Copilot</div>
   </div>
 </div>
 
@@ -161,7 +161,7 @@
       <span class="entry-date"><a href="https://github.com/spring-cloud/spring-cloud-config/pull/3272">PR #3272</a></span>
     </div>
     <ul>
-      <li>Added passwordless Azure Managed Identity auth so Config Server can pull Git repos as a managed identity, on top of the existing PAT and SSH options. Acquires the token and injects it as a Bearer header into JGit's HTTP transport, falling back to the old path if unavailable.</li>
+      <li>Added passwordless Azure Managed Identity authentication to Config Server Git repositories; acquired tokens and injected them as Bearer headers into JGit HTTP transport with clean legacy fallback.</li>
     </ul>
   </div>
 
@@ -177,31 +177,11 @@
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Spring Boot Admin <span class="entry-subtitle">| Monitoring UI for Spring applications</span></span>
-      <span class="entry-date"><a href="https://github.com/codecentric/spring-boot-admin/pull/5584">PR #5584</a></span>
-    </div>
-    <ul>
-      <li>Made the notification popup timeout configurable (it was hardcoded). Clicking a single-instance alert now jumps straight to that instance's detail page instead of the list. Backed by a Vitest case for the routing change.</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="entry-header">
       <span class="entry-title">Camel Kamelets <span class="entry-subtitle">| Reusable connectors for Apache Camel</span></span>
       <span class="entry-date"><a href="https://github.com/apache/camel-kamelets/pull/3039">PR #3039</a></span>
     </div>
     <ul>
-      <li>Kafka record keys were dropping whenever a message crossed an HTTP hop, which broke per-key ordering downstream. Mapped the standard kafka-key and CloudEvents ce-kafkakey headers through to CamelKafkaKey in the kafka-sink Kamelet.</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="entry-header">
-      <span class="entry-title">Apache Shiro <span class="entry-subtitle">| Authentication and authorization framework</span></span>
-      <span class="entry-date"><a href="https://github.com/apache/shiro/pull/2854">PR #2854</a></span>
-    </div>
-    <ul>
-      <li>Fixed a user principal name binding bug that broke Active Directory DN logins. Shipped in Shiro 3.0.1.</li>
+      <li>Preserved Kafka message keys across HTTP transport hops in kafka-sink Kamelet, preventing partition key loss and ensuring strict per-key message ordering downstream.</li>
     </ul>
   </div>
 
@@ -211,7 +191,7 @@
       <span class="entry-date"><a href="https://github.com/kestra-io/kestra/pull/19007">#19007</a> | <a href="https://github.com/kestra-io/plugin-telegram/pull/51">#51</a></span>
     </div>
     <ul>
-      <li>Closed a socket leak in the MCP client's auto health check that occurred once per builder instance, and added case-sensitive enum validation to the Telegram plugin's ParseMode so a typo fails fast with a clear message instead of a 400 from Telegram.</li>
+      <li>Eliminated socket leak in MCP client health-check mechanism occurring on builder instantiations; added case-sensitive enum validation to Telegram plugin parse mode for fail-fast error handling.</li>
     </ul>
   </div>
 </div>
@@ -227,21 +207,8 @@
     </div>
     <ul>
       <li>Built payment service with <b>Idempotency</b> (double-checked locking) and <b>Distributed Locks</b> (Redis SET NX EX) to stop duplicate charges during concurrent payment requests.</li>
-      <li>Built a distributed <b>sliding-window rate limiter</b> using <b>Redis Sorted Sets (ZSET)</b> and a Spring <b>HandlerInterceptor</b> to throttle requests per merchant with <b>HTTP 429 Retry-After</b> headers, preventing downstream service overload during traffic spikes.</li>
       <li>Wired <b>Transactional Outbox Pattern</b> with a scheduled worker and retry limits so webhook events never drop when the network fails.</li>
       <li>Designed <b>Consistent Hashing ring router</b> with virtual nodes for load distribution, and <b>Double-Entry Ledger</b> for financial balance consistency.</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="entry-header">
-      <span class="entry-title">Synoptiq <span class="entry-subtitle">| Java, Spring Boot, Spring Security, PostgreSQL, Docker, AWS EC2</span></span>
-      <span class="entry-date"><a href="https://usesynoptiq.com">[Demo]</a> | <a href="https://github.com/abhiramaab/synoptiq-docs">[Docs]</a></span>
-    </div>
-    <ul>
-      <li>Workflow automation platform syncing Gmail and Google Calendar via OAuth2 and stateless JWT auth, storing records in PostgreSQL.</li>
-      <li>Turned on HTTP/2 multiplexing so concurrent API calls and Server-Sent Events share one persistent TCP connection.</li>
-      <li>Implemented background OAuth token refresh lifecycle and exponential backoff retry policies for Google API rate limits.</li>
     </ul>
   </div>
 
@@ -254,6 +221,18 @@
       <li>Logistics dispatch app split into 9 Spring Boot services covering orders, dispatch, and tracking.</li>
       <li>Eureka handles service discovery and Spring Cloud Gateway routes traffic with JWT validation done once at the edge.</li>
       <li>Services talk to each other over OpenFeign with client-side load balancing.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Synoptiq <span class="entry-subtitle">| Java, Spring Boot, Spring Security, PostgreSQL, Docker, AWS EC2</span></span>
+      <span class="entry-date"><a href="https://usesynoptiq.com">[Demo]</a> | <a href="https://github.com/abhiramaab/synoptiq-docs">[Docs]</a></span>
+    </div>
+    <ul>
+      <li>Workflow automation platform syncing Gmail and Google Calendar via OAuth2 and stateless JWT auth, storing records in PostgreSQL.</li>
+      <li>Turned on HTTP/2 multiplexing so concurrent API calls and Server-Sent Events share one persistent TCP connection.</li>
+      <li>Implemented background OAuth token refresh lifecycle and exponential backoff retry policies for Google API rate limits.</li>
     </ul>
   </div>
 </div>
