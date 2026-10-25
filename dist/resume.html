@@ -6,7 +6,7 @@
 <style>
   @page {
     size: letter;
-    margin: 10mm 11mm 10mm 11mm; /* Clean margins to fit 1 page */
+    margin: 8mm 10mm 8mm 10mm; /* Clean margins to fit 1 page */
   }
   * {
     box-sizing: border-box;
@@ -16,8 +16,8 @@
   body {
     font-family: "Computer Modern Roman", "Latin Modern Roman", "Times New Roman", Times, serif;
     color: #000;
-    line-height: 1.22;
-    font-size: 9.1pt;
+    line-height: 1.18;
+    font-size: 8.9pt;
     background: #fff;
     -webkit-print-color-adjust: exact;
   }
@@ -74,12 +74,12 @@
 
   /* Item / Entry */
   .entry {
-    margin-bottom: 3.5px;
+    margin-bottom: 2.2px;
   }
   .entry-header {
     display: flex;
     justify-content: space-between;
-    font-size: 9.1pt;
+    font-size: 8.9pt;
   }
   .entry-title {
     font-weight: bold;
@@ -91,26 +91,26 @@
   .entry-date {
     text-align: right;
     white-space: nowrap;
-    font-size: 8.8pt;
+    font-size: 8.6pt;
   }
   .entry-sub {
     display: flex;
     justify-content: space-between;
     font-style: italic;
-    font-size: 8.6pt;
+    font-size: 8.4pt;
     color: #111;
   }
 
   /* Bullet lists */
   ul {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-top: 1px;
   }
   li {
     margin-bottom: 1px;
-    font-size: 8.6pt;
+    font-size: 8.4pt;
     text-align: justify;
-    line-height: 1.22;
+    line-height: 1.18;
   }
   b, strong {
     font-weight: bold;
@@ -202,6 +202,16 @@
     </div>
     <ul>
       <li>Fixed a user principal name binding bug that broke Active Directory DN logins. Shipped in Shiro 3.0.1.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Apache Hop <span class="entry-subtitle">| Data orchestration platform</span></span>
+      <span class="entry-date"><a href="https://github.com/apache/hop/pull/8344">PR #8344</a> | <a href="https://github.com/apache/hop/pull/8343">#8343</a></span>
+    </div>
+    <ul>
+      <li>Fixed stalled web sessions in Hop Web via ServerPushSession keepalive (Issue #8327); suppressed redundant notification HTTP wire logs with regression test suite (Issue #8340). Both merged.</li>
     </ul>
   </div>
 
