@@ -11,7 +11,7 @@ export const summary = {
   link: {
     href: 'https://usesynoptiq.com',
   },
-  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Spring Boot, Apache BifroMQ, Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, Jenkins, and Kestra, fixing bugs in distributed MQTT brokers, authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
+  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Spring Boot, Apache BifroMQ, Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, and Kestra, fixing bugs in distributed MQTT brokers, authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
 }
 
 export const projects = [
@@ -127,17 +127,6 @@ export const openSource = [
       { label: 'Telegram #51 (Merged)', href: 'https://github.com/kestra-io/plugin-telegram/pull/51' },
     ],
     desc: 'Resolved Model Context Protocol (MCP) client auto health-check socket leaks across builder instances (Issue #18981); added case-sensitive enum validation for Telegram plugin.',
-  },
-  {
-    name: 'Jenkins Ecosystem',
-    href: 'https://github.com/jenkinsci',
-    badge: 'PR',
-    repoDesc: 'Workflow SCM Step & Jira Plugins',
-    prs: [
-      { label: 'Jira Plugin #143', href: 'https://github.com/jenkinsci/atlassian-jira-software-cloud-plugin/pull/143' },
-      { label: 'Workflow SCM #273', href: 'https://github.com/jenkinsci/workflow-scm-step-plugin/pull/273' },
-    ],
-    desc: 'Resolved multibranch pipeline build/deployment URL routing 404s via RunUrlProvider branch path percent-encoding; eliminated redundant workspace baseline polling in Workflow SCM Step plugin.',
   },
 ]
 
