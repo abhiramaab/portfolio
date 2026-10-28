@@ -135,7 +135,7 @@
 <div class="section">
   <div class="section-title">Summary</div>
   <div style="font-size: 8.8pt; text-align: justify; line-height: 1.25;">
-    Self-taught backend developer building distributed services and event pipelines with <b>Java</b>, <b>Spring Boot</b>, and <b>Spring Security</b>. I fix bugs and contribute patches to large open-source codebases (<b>Apache BifroMQ</b>, <b>Spring Cloud</b>, <b>Spring Boot Admin</b>, <b>Apache Camel</b>, <b>Apache Shiro</b>, <b>Kestra</b>) spanning authentication, Kafka transport, and concurrency. Before this I spent four years in supply chain and ERP operations.
+    Self-taught backend developer building distributed services and event pipelines with <b>Java</b>, <b>Spring Boot</b>, and <b>Spring Security</b>. I fix bugs and contribute patches to large open-source codebases (<b>Apache Pulsar</b>, <b>Apache BifroMQ</b>, <b>Spring Cloud</b>, <b>Spring Boot Admin</b>, <b>Apache Camel</b>, <b>Apache Shiro</b>, <b>Kestra</b>) spanning authentication, Kafka transport, and concurrency. Before this I spent four years in supply chain and ERP operations.
   </div>
 </div>
 
@@ -153,7 +153,17 @@
 <!-- OPEN SOURCE CONTRIBUTIONS -->
 <div class="section">
   <div class="section-title">Open Source Contributions</div>
-  <div style="font-size: 8.5pt; font-style: italic; margin-bottom: 3px;">Merged pull requests into production projects:</div>
+  <div style="font-size: 8.5pt; font-style: italic; margin-bottom: 3px;">Featured pull requests in production distributed systems:</div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Apache Pulsar <span class="entry-subtitle">| Distributed messaging and streaming platform</span></span>
+      <span class="entry-date"><a href="https://github.com/apache/pulsar/pull/27022">PR #27022 (Merged)</a></span>
+    </div>
+    <ul>
+      <li>Fixed broker dispatch rate limiting overshoot under batched messages by dynamically scaling entry read limits using consumer batch estimates, preserving sub-batch forward progress, and handling uninitialized estimates before range filtering (fixes #26959, merged into 5.1.0).</li>
+    </ul>
+  </div>
 
   <div class="entry">
     <div class="entry-header">
