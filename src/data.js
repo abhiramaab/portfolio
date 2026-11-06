@@ -116,14 +116,15 @@ export const openSource = [
   },
   {
     name: 'Apache Hop',
-    href: 'https://github.com/apache/hop/pull/8344',
+    href: 'https://github.com/apache/hop/pull/9311',
     badge: 'Merged',
     repoDesc: 'ASF Data Orchestration Platform',
     prs: [
+      { label: 'PR #9311 (Merged)', href: 'https://github.com/apache/hop/pull/9311' },
       { label: 'PR #8344 (Merged)', href: 'https://github.com/apache/hop/pull/8344' },
       { label: 'PR #8343 (Merged)', href: 'https://github.com/apache/hop/pull/8343' },
     ],
-    desc: 'Fixed Hop Web stalled session bug via ServerPushSession UI keepalive (Issue #8327); suppressed redundant notification HTTP wire logs with regression test suite (Issue #8340). Both merged into Apache Hop.',
+    desc: 'Fixed RemoteHopServer retry backoff crash caused by integer underflow producing zero for random jitter bounds (Issue #9278); resolved Hop Web stalled session bug via ServerPushSession keepalive (Issue #8327). All merged into Apache Hop.',
   },
   {
     name: 'Kestra',
