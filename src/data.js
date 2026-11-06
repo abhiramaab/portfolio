@@ -91,6 +91,18 @@ export const openSource = [
     desc: 'Implemented passwordless Azure Managed Identity authentication for Git repos in Spring Cloud Config (+706 lines); acquired Azure tokens and injected Bearer headers into JGit HTTP transport with fallback.',
   },
   {
+    name: 'Apache Hop',
+    href: 'https://github.com/apache/hop/pull/9311',
+    badge: 'Merged',
+    repoDesc: 'ASF Data Orchestration Platform',
+    prs: [
+      { label: 'PR #9311 (Merged)', href: 'https://github.com/apache/hop/pull/9311' },
+      { label: 'PR #8344 (Merged)', href: 'https://github.com/apache/hop/pull/8344' },
+      { label: 'PR #8343 (Merged)', href: 'https://github.com/apache/hop/pull/8343' },
+    ],
+    desc: 'Fixed RemoteHopServer retry backoff crash caused by integer underflow producing zero for random jitter bounds (Issue #9278); resolved Hop Web stalled session bug via ServerPushSession keepalive (Issue #8327). All merged into Apache Hop.',
+  },
+  {
     name: 'codecentric / Spring Boot Admin',
     href: 'https://github.com/codecentric/spring-boot-admin/pull/5584',
     pr: '#5584',
@@ -113,18 +125,6 @@ export const openSource = [
     badge: 'Merged',
     repoDesc: 'ASF Security Framework',
     desc: 'Fixed Active Directory DN Authentication by resolving user principal name binding bug; validated and merged into official release 3.0.1.',
-  },
-  {
-    name: 'Apache Hop',
-    href: 'https://github.com/apache/hop/pull/9311',
-    badge: 'Merged',
-    repoDesc: 'ASF Data Orchestration Platform',
-    prs: [
-      { label: 'PR #9311 (Merged)', href: 'https://github.com/apache/hop/pull/9311' },
-      { label: 'PR #8344 (Merged)', href: 'https://github.com/apache/hop/pull/8344' },
-      { label: 'PR #8343 (Merged)', href: 'https://github.com/apache/hop/pull/8343' },
-    ],
-    desc: 'Fixed RemoteHopServer retry backoff crash caused by integer underflow producing zero for random jitter bounds (Issue #9278); resolved Hop Web stalled session bug via ServerPushSession keepalive (Issue #8327). All merged into Apache Hop.',
   },
   {
     name: 'Kestra',
