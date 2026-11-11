@@ -11,7 +11,7 @@ export const summary = {
   link: {
     href: 'https://usesynoptiq.com',
   },
-  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Apache Pulsar, Spring Boot, Apache BifroMQ, Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, and Kestra, fixing bugs in distributed messaging, MQTT brokers, authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
+  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Apache Pulsar, Apache MINA SSHD, Spring Boot, Apache BifroMQ, Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, and Kestra, fixing bugs in distributed messaging, SSH protocol race conditions, MQTT brokers, authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
 }
 
 export const projects = [
@@ -63,6 +63,14 @@ export const openSource = [
     badge: 'Merged',
     repoDesc: 'Distributed Messaging & Streaming Platform',
     desc: 'Prevented broker dispatch rate limiting overshoot under batched messages by dynamically scaling entry read limits using consumer batch estimates (avgMessagesPerEntry), preserving sub-batch forward progress, and handling cold-start uninitialized estimates (fixes #26959, merged into 5.1.0).',
+  },
+  {
+    name: 'Apache MINA SSHD',
+    href: 'https://github.com/apache/mina-sshd/pull/953',
+    pr: '#953',
+    badge: 'Merged',
+    repoDesc: 'Asynchronous SSH & SFTP Protocol Framework',
+    desc: 'Resolved race condition in IdentFilter where premature CAS release of the write queue guard allowed concurrent KEX messages (SSH_MSG_KEX_FIRST) to overtake SSH_MSG_KEXINIT; guarded queue release until outbound dispatch and added regression test for concurrent message ordering (fixes #952, merged into dev_3.0).',
   },
   {
     name: 'Spring Boot (Core)',
