@@ -41,18 +41,6 @@ export const projects = [
     desc: 'Logistics and fleet operations platform with Spring Boot backend, Spring Data JPA, JWT auth, and interactive live tracking dashboard.',
     external: true,
   },
-  {
-    name: 'Velt',
-    href: 'https://velt.cloud',
-    tagline: 'AI-native design generation platform synthesizing production-ready UI documents and design systems.',
-    github: 'https://github.com/abhiramaab/velt',
-    docs: 'https://github.com/abhiramaab/velt/blob/main/docs/ARCHITECTURE.md',
-    live: 'https://velt.cloud',
-    description: 'AI-native design platform synthesizing production-ready digital design documents, responsive prototypes, and design systems directly from natural language prompts. Built with Next.js 15 (App Router), React 19, TypeScript, Java 21, Spring Boot 3.5, Supabase, and OpenAI GPT-4o strict JSON schema enforcement adhering to SOLID architecture.',
-    desc: 'AI design platform synthesizing production-ready UI documents, responsive prototypes, and design systems from natural language via Next.js 15, Spring Boot 3.5, OpenAI structured schema inference, and SOLID design.',
-    tags: ['Java 21', 'Spring Boot 3.5', 'SOLID Principles', 'Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'OpenAI GPT-4o', 'Supabase'],
-    external: true,
-  },
 ]
 
 export const openSource = [
@@ -63,14 +51,6 @@ export const openSource = [
     badge: 'Merged',
     repoDesc: 'Distributed Messaging & Streaming Platform',
     desc: 'Prevented broker dispatch rate limiting overshoot under batched messages by dynamically scaling entry read limits using consumer batch estimates (avgMessagesPerEntry), preserving sub-batch forward progress, and handling cold-start uninitialized estimates (fixes #26959, merged into 5.1.0).',
-  },
-  {
-    name: 'Spring Boot (Core)',
-    href: 'https://github.com/spring-projects/spring-boot',
-    pr: 'fix-netty-graceful-abort-hang-52119',
-    badge: 'Fix',
-    repoDesc: 'Spring Framework Core Runtime & Web Server',
-    desc: 'Avoid hang in NettyWebServer.stop() when stopping immediately after graceful shutdown abort.',
   },
   {
     name: 'Apache BifroMQ',
@@ -101,14 +81,6 @@ export const openSource = [
       { label: 'PR #8343 (Merged)', href: 'https://github.com/apache/hop/pull/8343' },
     ],
     desc: 'Fixed RemoteHopServer retry backoff crash caused by integer underflow producing zero for random jitter bounds (Issue #9278); resolved Hop Web stalled session bug via ServerPushSession keepalive (Issue #8327). All merged into Apache Hop.',
-  },
-  {
-    name: 'codecentric / Spring Boot Admin',
-    href: 'https://github.com/codecentric/spring-boot-admin/pull/5584',
-    pr: '#5584',
-    badge: 'Merged',
-    repoDesc: 'Centralized Microservices Management & Monitoring',
-    desc: 'Implemented configurable browser notification timeouts via server-side application properties and deep-link navigation directly to instance details for single-instance status changes with Vitest tests (Issue #5504, +148 lines).',
   },
   {
     name: 'Apache Camel',
