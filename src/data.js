@@ -11,7 +11,7 @@ export const summary = {
   link: {
     href: 'https://usesynoptiq.com',
   },
-  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Apache Pulsar, Spring Boot, Apache BifroMQ, Spring Cloud, Spring Boot Admin, Apache Camel, Apache Shiro, Apache Hop, and Kestra, fixing bugs in distributed messaging, MQTT brokers, authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
+  rest: '  Self-taught backend developer building distributed services and event pipelines with Java (8/17/21), Spring Boot, and Spring Security. I contribute patches to open-source codebases including Apache Pulsar, Spring Cloud, Apache Camel, Apache Shiro, and Kestra, fixing bugs in distributed messaging, cloud authentication, Kafka transport, and concurrency. I build distributed workflows, idempotent services, and resilient data models.',
 }
 
 export const projects = [
@@ -53,34 +53,12 @@ export const openSource = [
     desc: 'Prevented broker dispatch rate limiting overshoot under batched messages by dynamically scaling entry read limits using consumer batch estimates (avgMessagesPerEntry), preserving sub-batch forward progress, and handling cold-start uninitialized estimates (fixes #26959, merged into 5.1.0).',
   },
   {
-    name: 'Apache BifroMQ',
-    badge: 'Integrated',
-    repoDesc: 'Distributed MQTT Broker (High-Performance Engine)',
-    prs: [
-      { label: 'PR #314', href: 'https://github.com/apache/bifromq/pull/314' },
-      { label: 'PR #315 (Merged)', href: 'https://github.com/apache/bifromq/pull/315' },
-    ],
-    desc: 'Diagnosed QoS 1 persistent subscriber deadlock caused by inbound Netty decoder & outbound packet-sizer mismatch (Issue #313); authored varint-aware boundary limits and drop-and-confirm delivery semantics in PR #314, integrated into main via PR #315.',
-  },
-  {
     name: 'Spring Cloud',
     href: 'https://github.com/spring-cloud/spring-cloud-config/pull/3272',
     pr: '#3272',
     badge: 'Merged',
     repoDesc: 'Distributed Configuration & Microservices Engine',
     desc: 'Implemented passwordless Azure Managed Identity authentication for Git repos in Spring Cloud Config (+706 lines); acquired Azure tokens and injected Bearer headers into JGit HTTP transport with fallback.',
-  },
-  {
-    name: 'Apache Hop',
-    href: 'https://github.com/apache/hop/pull/9311',
-    badge: 'Merged',
-    repoDesc: 'ASF Data Orchestration Platform',
-    prs: [
-      { label: 'PR #9311 (Merged)', href: 'https://github.com/apache/hop/pull/9311' },
-      { label: 'PR #8344 (Merged)', href: 'https://github.com/apache/hop/pull/8344' },
-      { label: 'PR #8343 (Merged)', href: 'https://github.com/apache/hop/pull/8343' },
-    ],
-    desc: 'Fixed RemoteHopServer retry backoff crash caused by integer underflow producing zero for random jitter bounds (Issue #9278); resolved Hop Web stalled session bug via ServerPushSession keepalive (Issue #8327). All merged into Apache Hop.',
   },
   {
     name: 'Apache Camel',

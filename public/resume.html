@@ -135,7 +135,7 @@
 <div class="section">
   <div class="section-title">Summary</div>
   <div style="font-size: 8.8pt; text-align: justify; line-height: 1.25;">
-    Self-taught backend developer building distributed services and event pipelines with <b>Java</b>, <b>Spring Boot</b>, and <b>Spring Security</b>. I fix bugs and contribute patches to large open-source codebases (<b>Apache Pulsar</b>, <b>Apache BifroMQ</b>, <b>Spring Cloud</b>, <b>Spring Boot Admin</b>, <b>Apache Camel</b>, <b>Apache Shiro</b>, <b>Kestra</b>) spanning authentication, Kafka transport, and concurrency. Before this I spent four years in supply chain and ERP operations.
+    Self-taught backend developer building distributed services and event pipelines with <b>Java</b>, <b>Spring Boot</b>, and <b>Spring Security</b>. I fix bugs and contribute patches to large open-source codebases (<b>Apache Pulsar</b>, <b>Spring Cloud</b>, <b>Apache Camel</b>, <b>Apache Shiro</b>, <b>Kestra</b>) spanning authentication, Kafka transport, and concurrency. Before this I spent four years in supply chain and ERP operations.
   </div>
 </div>
 
@@ -177,16 +177,6 @@
 
   <div class="entry">
     <div class="entry-header">
-      <span class="entry-title">Apache BifroMQ <span class="entry-subtitle">| High-performance distributed MQTT broker</span></span>
-      <span class="entry-date"><a href="https://github.com/apache/bifromq/pull/314">PR #314</a> (<a href="https://github.com/apache/bifromq/pull/315">Merged via #315</a>)</span>
-    </div>
-    <ul>
-      <li>Diagnosed QoS 1 subscriber stall caused by Netty decoder vs. packet-sizer mismatch (Issue #313); authored fix aligning variable-length integer framing and drop-and-confirm delivery semantics, integrated into main via PR #315.</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="entry-header">
       <span class="entry-title">Camel Kamelets <span class="entry-subtitle">| Reusable connectors for Apache Camel</span></span>
       <span class="entry-date"><a href="https://github.com/apache/camel-kamelets/pull/3039">PR #3039</a></span>
     </div>
@@ -202,16 +192,6 @@
     </div>
     <ul>
       <li>Fixed a user principal name binding bug that broke Active Directory DN logins. Shipped in Shiro 3.0.1.</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="entry-header">
-      <span class="entry-title">Apache Hop <span class="entry-subtitle">| Data orchestration platform</span></span>
-      <span class="entry-date"><a href="https://github.com/apache/hop/pull/8344">PR #8344</a> | <a href="https://github.com/apache/hop/pull/8343">#8343</a></span>
-    </div>
-    <ul>
-      <li>Fixed stalled web sessions in Hop Web via ServerPushSession keepalive (Issue #8327); suppressed redundant notification HTTP wire logs with regression test suite (Issue #8340). Both merged.</li>
     </ul>
   </div>
 
